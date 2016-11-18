@@ -2,9 +2,13 @@
   (:require [picture-gallery.components.registration :as reg]
             [picture-gallery.components.login :as l]
             [picture-gallery.components.upload :as u]
+            [picture-gallery.components.gallery :as g] 
             [picture-gallery.ajax :refer [load-interceptors!]]
+            [secretary.core :as secretary :include-macros true]
             [reagent.core :as reagent :refer [atom]]
             [reagent.session :as session]
+            [goog.events :as events]
+            [goog.history.EventType :as EventType]
             [ajax.core :as ajax])
   (:import goog.History))
 
@@ -43,22 +47,74 @@
          [nav-link "#/about" "About" :about collapsed?]]
         [user-menu]]])))
 
+(defn galleries [gallery-links]
+  [:div.text-xs-center
+   (for [row (partition-all 3 gallery-links)]
+     ^{:key row}
+     [:div.row
+      (for [{:keys [owner name]} row]
+        ^{:key (str owner name)}
+        [:div.col-sm-4
+         [:a {:href (str "#/gallery/" owner)}
+          [:img {:src (str js/context "/gallery/" owner "/" name)}]]])])])
+
+(defn list-galleries! []
+  (ajax/GET "/list-galleries"
+            {:handler #(session/put! :gallery-links %)}))
+
+(defn home-page []
+  (list-galleries!)
+  (fn []
+    [:div.container
+     [:div.row
+      [:div.col-md-12>h2 "Available Galleries"]]
+     (when-let [gallery-links (session/get :gallery-links)]
+       [:div.row>div.col-md-12
+        [galleries gallery-links]])]))
+
+(defn about-page []
+  [:div "this is the story of picture-gallery... work in progress"])
+
+(def pages
+  {:home    #'home-page
+   :gallery #'g/gallery-page
+   :about   #'about-page})
+
 (defn modal []
   (when-let [session-modal (session/get :modal)] 
     [session-modal]))
 
 (defn page []
   [:div 
-   [navbar]
    [modal] 
-   [:div.container>div.starter-template
-    [:h1 "Picture Gallery Smart Project"]
-    [:p.lead "Esta pagina esta en construcción "]]])
+   [(pages (session/get :page))]])
+
+(secretary/set-config! :prefix "#")
+
+(secretary/defroute "/" []
+  (session/put! :page :home))
+
+(secretary/defroute "/gallery/:owner" [owner]
+  (g/fetch-gallery-thumbs! owner)
+  (session/put! :page :gallery))
+
+(secretary/defroute "/about" []
+  (session/put! :page :about))
+
+(defn hook-browser-navigation! []
+  (doto (History.)
+    (events/listen
+     EventType/NAVIGATE
+     (fn [event]
+       (secretary/dispatch! (.-token event))))
+    (.setEnabled true)))
 
 (defn mount-components []
-  (reagent/render-component [page] (.getElementById js/document "app")))
+  (reagent/render [#'navbar] (.getElementById js/document "navbar"))
+  (reagent/render [#'page] (.getElementById js/document "app")))
 
 (defn init! []
   (load-interceptors!)
+  (hook-browser-navigation!)
   (session/put! :identity js/identity)
   (mount-components))

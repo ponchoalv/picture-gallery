@@ -88,3 +88,12 @@ body {
 .card-block {
     padding: 0.3rem;
 }
+
+.image {
+    z-index: 100;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding:20px;
+}

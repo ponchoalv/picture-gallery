@@ -1,6 +1,7 @@
 (ns picture-gallery.routes.services
   (:require [picture-gallery.routes.services.auth :as auth]
             [picture-gallery.routes.services.upload :as upload]
+            [picture-gallery.routes.services.gallery :as gallery]
             [ring.util.http-response :refer :all]
             [compojure.api.sweet :refer :all]
             [compojure.api.upload :refer :all]
@@ -15,6 +16,10 @@
   {:result s/Keyword
    (s/optional-key :message) String})
 
+(s/defschema Gallery
+  {:owner               String
+   :name                String
+   (s/optional-key :rk) s/Num})
 
 (defapi service-routes
   {:swagger {:ui "/swagger-ui"
@@ -36,7 +41,20 @@
   (POST "/logout" []
         :summary "remove user session"
         :return Result
-        (auth/logout!)))
+        (auth/logout!))
+  (GET "/gallery/:owner/:name" []
+       :summary "display user image"
+       :path-params [name :- String]
+       (gallery/get-image name))
+  (GET "/list-thumbnails/:owner" []
+       :path-params [owner :- String]
+       :summary "list thumbnails for images in the gallery"
+       :return [Gallery]
+       (gallery/list-thumbnails owner))
+  (GET "/list-galleries" []
+       :summary "lists a thumbnail for each user"
+       :return [Gallery]
+       (gallery/list-galleries)))
 
 (defapi restricted-service-routes
   {:swagger {:ui "/swagger-ui-private"
@@ -49,4 +67,9 @@
         :middleware [wrap-multipart-params]
         :summary "handles image upload"
         :return Result
-        (upload/save-image! (:identity req) file)))
+        (upload/save-image! (:identity req) file))
+  (POST "/delete-image" req
+        :body-params [image-name :- String thumb-name :- String]
+        :summary "delete the specified file from the database"
+        :return Result
+        (gallery/delete-image! (:identity req) thumb-name image-name)))

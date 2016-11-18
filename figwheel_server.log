@@ -1,0 +1,785 @@
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.937 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\validation.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.624 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\validation.js
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.114 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/core.cljs   line:1  column:1  ----[0m
+
+  [1mOnly [lib.ns & options] and lib.ns specs supported in :require / :require-macros; offending spec: :as at line 1 src\cljs\picture_gallery\core.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.core[0m
+  [0m [0m  [33m^--- Only [lib.ns & options] and lib.ns specs supported in :require / :require-macros; offending spec: :as at line 1 src\cljs\picture_gallery\core.cljs[0m
+  [36m2[0m  [36m  (:require reagent.core :as reagent :refer [atom])[0m
+  [36m3[0m  [36m  (:import goog.History))[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.276 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/core.cljs   line:1  column:1  ----[0m
+
+  [1mOnly [lib.ns & options] and lib.ns specs supported in :require / :require-macros; offending spec: :as at line 1 src\cljs\picture_gallery\core.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.core[0m
+  [0m [0m  [33m^--- Only [lib.ns & options] and lib.ns specs supported in :require / :require-macros; offending spec: :as at line 1 src\cljs\picture_gallery\core.cljs[0m
+  [36m2[0m  [36m  (:require reagent.core :as reagent :refer [atom])[0m
+  [36m3[0m  [36m  (:import goog.History))[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.768 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/core.cljs  ----[0m
+
+  [1mNo such namespace: reagent.session, could not locate reagent/session.cljs, reagent/session.cljc, or Closure namespace "reagent.session" [0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.68 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/core.cljs   line:7  column:1  ----[0m
+
+  [1mUnable to resolve var: home-page in this context at line 7 src\cljs\picture_gallery\core.cljs[0m
+
+  [36m5[0m  [36m  (:import goog.History))[0m
+  [36m6[0m  [36m[0m
+  [33m7[0m  [1m(def pages[0m
+  [0m [0m  [33m^--- Unable to resolve var: home-page in this context at line 7 src\cljs\picture_gallery\core.cljs[0m
+  [36m8[0m  [36m  {:home  #'home-page[0m
+  [36m9[0m  [36m   :about #'about-page})[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.841 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   /c:/Users/ponch/projects/picture-gallery/src/cljs/picture_gallery/components/common.cljs   line:21  column:31  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.common/assco[0m
+
+  [36m17[0m  [36m  [:input.form-control.input-lg[0m
+  [36m18[0m  [36m   {:type type[0m
+  [36m19[0m  [36m    :placeholder placeholder[0m
+  [36m20[0m  [36m    :value (id @fields)[0m
+  [33m21[0m  [1m    :on-change #(swap! fields assco id (-> % .-target .-value))}])[0m
+  [0m  [0m  [33m                              ^--- Use of undeclared Var picture-gallery.components.common/assco[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(defn form-input [type label id placeholder fields optional?][0m
+  [36m24[0m  [36m  [:div.form-group[0m
+  [36m25[0m  [36m   [:label label][0m
+  [36m26[0m  [36m   (if optional?[0m
+
+[36m----  Compiler Warning : Please see /c:/Users/ponch/projects/picture-gallery/src/cljs/picture_gallery/components/common.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 12.186 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\common.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   /c:/Users/ponch/projects/picture-gallery/src/cljs/picture_gallery/components/registration.cljs   line:15  column:76  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/field[0m
+
+  [36m11[0m  [36m [:div.well.well-sm[0m
+  [36m12[0m  [36m  [:strong "* required field"]][0m
+  [36m13[0m  [36m [c/text-input "name" :id "enter a user name" fields][0m
+  [36m14[0m  [36m [c/password-input "password" :pass "enter a password" fields][0m
+  [33m15[0m  [1m [c/password-input "password" :pass-confirm "re-enter the password" field]][0m
+  [0m  [0m  [33m                                                                    ^--- Use of undeclared Var picture-gallery.components.registration/field[0m
+  [36m16[0m  [36m[:div[0m
+  [36m17[0m  [36m [:button.btn.btn-primary "Register"][0m
+  [36m18[0m  [36m [:button.btn.btn-danger "Cancel"]]])))[0m
+
+[36m----  Compiler Warning : Please see /c:/Users/ponch/projects/picture-gallery/src/cljs/picture_gallery/components/registration.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.959 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   /c:/Users/ponch/projects/picture-gallery/src/cljs/picture_gallery/core.cljs   line:9  column:5  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/registration-form-example[0m
+
+  [36m 5[0m  [36m  (:import goog.History))[0m
+  [36m 6[0m  [36m[0m
+  [36m 7[0m  [36m(defn page [][0m
+  [36m 8[0m  [36m  [:div[0m
+  [33m 9[0m  [1m   [reg/registration-form-example]])[0m
+  [0m  [0m  [33m    ^--- Use of undeclared Var picture-gallery.components.registration/registration-form-example[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn mount-components [][0m
+  [36m12[0m  [36m  (reagent/render-component [page] (.getElementById js/document "app")))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn init! [][0m
+
+[36m----  Compiler Warning : Please see /c:/Users/ponch/projects/picture-gallery/src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.209 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/components/registration.cljs   line:15  column:76  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/field[0m
+
+  [36m11[0m  [36m [:div.well.well-sm[0m
+  [36m12[0m  [36m  [:strong "* required field"]][0m
+  [36m13[0m  [36m [c/text-input "name" :id "enter a user name" fields][0m
+  [36m14[0m  [36m [c/password-input "password" :pass "enter a password" fields][0m
+  [33m15[0m  [1m [c/password-input "password" :pass-confirm "re-enter the password" field]][0m
+  [0m  [0m  [33m                                                                    ^--- Use of undeclared Var picture-gallery.components.registration/field[0m
+  [36m16[0m  [36m[:div[0m
+  [36m17[0m  [36m [:button.btn.btn-primary "Register"][0m
+  [36m18[0m  [36m [:button.btn.btn-danger "Cancel"]]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/components/registration.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:9  column:5  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/registration-form-example[0m
+
+  [36m 5[0m  [36m  (:import goog.History))[0m
+  [36m 6[0m  [36m[0m
+  [36m 7[0m  [36m(defn page [][0m
+  [36m 8[0m  [36m  [:div[0m
+  [33m 9[0m  [1m   [reg/registration-form-example]])[0m
+  [0m  [0m  [33m    ^--- Use of undeclared Var picture-gallery.components.registration/registration-form-example[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn mount-components [][0m
+  [36m12[0m  [36m  (reagent/render-component [page] (.getElementById js/document "app")))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn init! [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.554 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\common.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:9  column:5  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/registration-form-example[0m
+
+  [36m 5[0m  [36m  (:import goog.History))[0m
+  [36m 6[0m  [36m[0m
+  [36m 7[0m  [36m(defn page [][0m
+  [36m 8[0m  [36m  [:div[0m
+  [33m 9[0m  [1m   [reg/registration-form-example]])[0m
+  [0m  [0m  [33m    ^--- Use of undeclared Var picture-gallery.components.registration/registration-form-example[0m
+  [36m10[0m  [36m[0m
+  [36m11[0m  [36m(defn mount-components [][0m
+  [36m12[0m  [36m  (reagent/render-component [page] (.getElementById js/document "app")))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn init! [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.565 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.917 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.345 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 1.511 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/ajax.cljs  ----[0m
+
+  [1mNo such namespace: ajax.core, could not locate ajax/core.cljs, ajax/core.cljc, or Closure namespace "ajax.core" [0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/ajax.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.971 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.901 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\ajax.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 9.433 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.151 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.881 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/components/registration.cljs   line:10  column:37  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/registration-form[0m
+
+  [36m 6[0m  [36m            [reagent.session :as session]))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn registration-button [][0m
+  [36m 9[0m  [36m  [:a.btn[0m
+  [33m10[0m  [1m   {:on-click #(session/put! :modal registration-form)}[0m
+  [0m  [0m  [33m                                    ^--- Use of undeclared Var picture-gallery.components.registration/registration-form[0m
+  [36m11[0m  [36m   "register"])[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn register! [fields errors][0m
+  [36m14[0m  [36m  (reset! errors (registration-errors @fields))[0m
+  [36m15[0m  [36m  (when-not @errors[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/components/registration.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 2.716 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/components/registration.cljs   line:10  column:37  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/registration-form[0m
+
+  [36m 6[0m  [36m            [reagent.session :as session]))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn registration-button [][0m
+  [36m 9[0m  [36m  [:a.btn[0m
+  [33m10[0m  [1m   {:on-click #(session/put! :modal registration-form)}[0m
+  [0m  [0m  [33m                                    ^--- Use of undeclared Var picture-gallery.components.registration/registration-form[0m
+  [36m11[0m  [36m   "register"])[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn register! [fields errors][0m
+  [36m14[0m  [36m  (reset! errors (registration-errors @fields))[0m
+  [36m15[0m  [36m  (when-not @errors[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/components/registration.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.639 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\common.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.979 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.767 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:18  column:21  ----[0m
+
+  [1mNo such namespace: r, could not locate r.cljs, r.cljc, or Closure namespace ""[0m
+
+  [36m14[0m  [36m    [:ul.nav.navbar-nav.pull-xs-right[0m
+  [36m15[0m  [36m     [:li.nav-item [reg/registration-button]]]))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn navbar [][0m
+  [33m18[0m  [1m  (let [collapsed? (r/atom true)][0m
+  [0m  [0m  [33m                    ^--- No such namespace: r, could not locate r.cljs, r.cljc, or Closure namespace ""[0m
+  [36m19[0m  [36m    (fn [][0m
+  [36m20[0m  [36m      [:nav.navbar.navbar-light.bg-faded[0m
+  [36m21[0m  [36m       [:button.navbar-toggler.hidden-sm-up[0m
+  [36m22[0m  [36m        {:on.click #(swap! collapsed? not)} "☰"][0m
+  [36m23[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:18  column:21  ----[0m
+
+  [1mUse of undeclared Var r/atom[0m
+
+  [36m14[0m  [36m    [:ul.nav.navbar-nav.pull-xs-right[0m
+  [36m15[0m  [36m     [:li.nav-item [reg/registration-button]]]))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn navbar [][0m
+  [33m18[0m  [1m  (let [collapsed? (r/atom true)][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var r/atom[0m
+  [36m19[0m  [36m    (fn [][0m
+  [36m20[0m  [36m      [:nav.navbar.navbar-light.bg-faded[0m
+  [36m21[0m  [36m       [:button.navbar-toggler.hidden-sm-up[0m
+  [36m22[0m  [36m        {:on.click #(swap! collapsed? not)} "☰"][0m
+  [36m23[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:27  column:11  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/nav-link[0m
+
+  [36m23[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+  [36m24[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m25[0m  [36m        [:a.navbar-brand {:href "#/"} "picture-gallery"][0m
+  [36m26[0m  [36m        [:ul.nav.navbar-nav[0m
+  [33m27[0m  [1m         [nav-link "#/" "Home" :home collapsed?][0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var picture-gallery.core/nav-link[0m
+  [36m28[0m  [36m         [nav-link "#/about" "About" :about collapsed?]]][0m
+  [36m29[0m  [36m       [user-menu]])))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn page [][0m
+  [36m32[0m  [36m  [:div[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:28  column:11  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/nav-link[0m
+
+  [36m24[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m25[0m  [36m        [:a.navbar-brand {:href "#/"} "picture-gallery"][0m
+  [36m26[0m  [36m        [:ul.nav.navbar-nav[0m
+  [36m27[0m  [36m         [nav-link "#/" "Home" :home collapsed?][0m
+  [33m28[0m  [1m         [nav-link "#/about" "About" :about collapsed?]]][0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var picture-gallery.core/nav-link[0m
+  [36m29[0m  [36m       [user-menu]])))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn page [][0m
+  [36m32[0m  [36m  [:div[0m
+  [36m33[0m  [36m   [user-menu][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.961 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:27  column:11  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/nav-link[0m
+
+  [36m23[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+  [36m24[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m25[0m  [36m        [:a.navbar-brand {:href "#/"} "picture-gallery"][0m
+  [36m26[0m  [36m        [:ul.nav.navbar-nav[0m
+  [33m27[0m  [1m         [nav-link "#/" "Home" :home collapsed?][0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var picture-gallery.core/nav-link[0m
+  [36m28[0m  [36m         [nav-link "#/about" "About" :about collapsed?]]][0m
+  [36m29[0m  [36m       [user-menu]])))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn modal [][0m
+  [36m32[0m  [36m  (when-let [session-modal (session/get :modal)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:28  column:11  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/nav-link[0m
+
+  [36m24[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m25[0m  [36m        [:a.navbar-brand {:href "#/"} "picture-gallery"][0m
+  [36m26[0m  [36m        [:ul.nav.navbar-nav[0m
+  [36m27[0m  [36m         [nav-link "#/" "Home" :home collapsed?][0m
+  [33m28[0m  [1m         [nav-link "#/about" "About" :about collapsed?]]][0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var picture-gallery.core/nav-link[0m
+  [36m29[0m  [36m       [user-menu]])))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn modal [][0m
+  [36m32[0m  [36m  (when-let [session-modal (session/get :modal)][0m
+  [36m33[0m  [36m    [session-modal]))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.094 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/components/registration.cljs   line:10  column:37  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/registration-form[0m
+
+  [36m 6[0m  [36m            [reagent.session :as session]))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn registration-button [][0m
+  [36m 9[0m  [36m  [:a.btn[0m
+  [33m10[0m  [1m   {:on-click #(session/put! :modal registration-form)}[0m
+  [0m  [0m  [33m                                    ^--- Use of undeclared Var picture-gallery.components.registration/registration-form[0m
+  [36m11[0m  [36m   "register"])[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn registration-form [][0m
+  [36m14[0m  [36m  (let [fields (atom {})[0m
+  [36m15[0m  [36m        error (atom nil)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/components/registration.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/components/registration.cljs   line:29  column:23  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/register![0m
+
+  [36m25[0m  [36m (when-let [error (:server-error @error)][0m
+  [36m26[0m  [36m   [:div.alert.alert-danger error])][0m
+  [36m27[0m  [36m[:div[0m
+  [36m28[0m  [36m [:button.btn.btn-primary.btn-space[0m
+  [33m29[0m  [1m  {:on-click #(register! fields error)}[0m
+  [0m  [0m  [33m               ^--- Use of undeclared Var picture-gallery.components.registration/register![0m
+  [36m30[0m  [36m  "Register"][0m
+  [36m31[0m  [36m [:button.btn.btn-danger.btn-space[0m
+  [36m32[0m  [36m  {:on-click #(session/remove! :modal)}[0m
+  [36m33[0m  [36m  "Cancel"]]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/components/registration.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:27  column:11  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/nav-link[0m
+
+  [36m23[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+  [36m24[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m25[0m  [36m        [:a.navbar-brand {:href "#/"} "picture-gallery"][0m
+  [36m26[0m  [36m        [:ul.nav.navbar-nav[0m
+  [33m27[0m  [1m         [nav-link "#/" "Home" :home collapsed?][0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var picture-gallery.core/nav-link[0m
+  [36m28[0m  [36m         [nav-link "#/about" "About" :about collapsed?]]][0m
+  [36m29[0m  [36m       [user-menu]])))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn modal [][0m
+  [36m32[0m  [36m  (when-let [session-modal (session/get :modal)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:28  column:11  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/nav-link[0m
+
+  [36m24[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m25[0m  [36m        [:a.navbar-brand {:href "#/"} "picture-gallery"][0m
+  [36m26[0m  [36m        [:ul.nav.navbar-nav[0m
+  [36m27[0m  [36m         [nav-link "#/" "Home" :home collapsed?][0m
+  [33m28[0m  [1m         [nav-link "#/about" "About" :about collapsed?]]][0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var picture-gallery.core/nav-link[0m
+  [36m29[0m  [36m       [user-menu]])))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn modal [][0m
+  [36m32[0m  [36m  (when-let [session-modal (session/get :modal)][0m
+  [36m33[0m  [36m    [session-modal]))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.275 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.889 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/components/registration.cljs   line:10  column:37  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.registration/registration-form[0m
+
+  [36m 6[0m  [36m            [reagent.session :as session]))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn registration-button [][0m
+  [36m 9[0m  [36m  [:a.btn[0m
+  [33m10[0m  [1m   {:on-click #(session/put! :modal registration-form)}[0m
+  [0m  [0m  [33m                                    ^--- Use of undeclared Var picture-gallery.components.registration/registration-form[0m
+  [36m11[0m  [36m   "register"])[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(defn register! [fields errors][0m
+  [36m14[0m  [36m  (reset! errors (registration-errors @fields))[0m
+  [36m15[0m  [36m  (when-not @errors[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/components/registration.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.939 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.923 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.988 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.747 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.078 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.663 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.016 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.869 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.982 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.651 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.563 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.009 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.919 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\registration.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.856 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 1.421 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/components/login.cljs   line:14  column:1  ----[0m
+
+  [1mToo many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+
+  [36m12[0m  [36m       (str "Basic ")))[0m
+  [36m13[0m  [36m[0m
+  [33m14[0m  [1m(def login! [fields error][0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+  [36m15[0m  [36m  (let [{:keys [id pass]} @fields][0m
+  [36m16[0m  [36m    (reset! error nil)[0m
+  [36m17[0m  [36m    (ajax/POST "/login"[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/components/login.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.631 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/components/login.cljs   line:14  column:1  ----[0m
+
+  [1mToo many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+
+  [36m12[0m  [36m       (str "Basic ")))[0m
+  [36m13[0m  [36m[0m
+  [33m14[0m  [1m(def login! [fields error][0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+  [36m15[0m  [36m  (let [{:keys [id pass]} @fields][0m
+  [36m16[0m  [36m    (reset! error nil)[0m
+  [36m17[0m  [36m    (ajax/POST "/login"[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/components/login.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.63 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/components/login.cljs   line:14  column:1  ----[0m
+
+  [1mToo many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+
+  [36m12[0m  [36m       (str "Basic ")))[0m
+  [36m13[0m  [36m[0m
+  [33m14[0m  [1m(def login! [fields error][0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+  [36m15[0m  [36m  (let [{:keys [id pass]} @fields][0m
+  [36m16[0m  [36m    (reset! error nil)[0m
+  [36m17[0m  [36m    (ajax/POST "/login"[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/components/login.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.614 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/components/login.cljs   line:14  column:1  ----[0m
+
+  [1mToo many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+
+  [36m12[0m  [36m       (str "Basic ")))[0m
+  [36m13[0m  [36m[0m
+  [33m14[0m  [1m(def login! [fields error][0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 14 src\cljs\picture_gallery\components\login.cljs[0m
+  [36m15[0m  [36m  (let [{:keys [id pass]} @fields][0m
+  [36m16[0m  [36m    (reset! error nil)[0m
+  [36m17[0m  [36m    (ajax/POST "/login"[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/components/login.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.61 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/components/login.cljs   line:14  column:1  ----[0m
+
+  [1mToo many arguments to def at line 14 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\components\login.cljs[0m
+
+  [36m12[0m  [36m       (str "Basic ")))[0m
+  [36m13[0m  [36m[0m
+  [33m14[0m  [1m(def login! [fields error][0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 14 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\components\login.cljs[0m
+  [36m15[0m  [36m  (let [{:keys [id pass]} @fields][0m
+  [36m16[0m  [36m    (reset! error nil)[0m
+  [36m17[0m  [36m    (ajax/POST "/login"[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/components/login.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.622 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/components/login.cljs   line:14  column:1  ----[0m
+
+  [1mToo many arguments to def at line 14 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\components\login.cljs[0m
+
+  [36m12[0m  [36m       (str "Basic ")))[0m
+  [36m13[0m  [36m[0m
+  [33m14[0m  [1m(def login! [fields error][0m
+  [0m  [0m  [33m^--- Too many arguments to def at line 14 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\components\login.cljs[0m
+  [36m15[0m  [36m  (let [{:keys [id pass]} @fields][0m
+  [36m16[0m  [36m    (reset! error nil)[0m
+  [36m17[0m  [36m    (ajax/POST "/login"[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/components/login.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.759 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.94 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.85 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.609 seconds.[0m
+[36m----  Could not Read  src/cljs/picture_gallery/core.cljs   line:16  column:33  ----[0m
+
+  [1mNested #()s are not allowed[0m
+
+  [36m14[0m  [36m   {:on-click #(ajax/POST[0m
+  [36m15[0m  [36m                "/logout"[0m
+  [33m16[0m  [1m                {:handler #(session/remove! :identity)})}[0m
+  [0m  [0m  [33m                            ^--- Nested #()s are not allowed[0m
+  [36m17[0m  [36m   [:i.fa.fa-user] " " id " | sign out"]]][0m
+  [36m18[0m  [36m[:ul.nav.navbar-nav.pull-right[0m
+  [36m19[0m  [36m [:li.nav-item [l/login-button]][0m
+
+[36m----  Reader Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.577 seconds.[0m
+[36m----  Could not Read  src/cljs/picture_gallery/core.cljs   line:16  column:33  ----[0m
+
+  [1mNested #()s are not allowed[0m
+
+  [36m14[0m  [36m   {:on-click #(ajax/POST[0m
+  [36m15[0m  [36m                "/logout"[0m
+  [33m16[0m  [1m                {:handler #((session/remove! :identity))})}[0m
+  [0m  [0m  [33m                            ^--- Nested #()s are not allowed[0m
+  [36m17[0m  [36m   [:i.fa.fa-user] " " id " | sign out"]]][0m
+  [36m18[0m  [36m[:ul.nav.navbar-nav.pull-right[0m
+  [36m19[0m  [36m [:li.nav-item [l/login-button]][0m
+
+[36m----  Reader Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.727 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.708 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.809 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/ajax.cljs   line:5  column:4  ----[0m
+
+  [1mNo such namespace: session, could not locate session.cljs, session.cljc, or Closure namespace ""[0m
+
+  [36m 1[0m  [36m(ns picture-gallery.ajax[0m
+  [36m 2[0m  [36m  (:require [ajax.core :as ajax]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m(defn user-action [request][0m
+  [33m 5[0m  [1m  (session/put! :user-event true)[0m
+  [0m  [0m  [33m   ^--- No such namespace: session, could not locate session.cljs, session.cljc, or Closure namespace ""[0m
+  [36m 6[0m  [36m  request)[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn default-headers [request][0m
+  [36m 9[0m  [36m  (-> request[0m
+  [36m10[0m  [36m      (update :uri #(str js/context %))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/ajax.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/ajax.cljs   line:5  column:4  ----[0m
+
+  [1mUse of undeclared Var session/put![0m
+
+  [36m 1[0m  [36m(ns picture-gallery.ajax[0m
+  [36m 2[0m  [36m  (:require [ajax.core :as ajax]))[0m
+  [36m 3[0m  [36m[0m
+  [36m 4[0m  [36m(defn user-action [request][0m
+  [33m 5[0m  [1m  (session/put! :user-event true)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var session/put![0m
+  [36m 6[0m  [36m  request)[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn default-headers [request][0m
+  [36m 9[0m  [36m  (-> request[0m
+  [36m10[0m  [36m      (update :uri #(str js/context %))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/ajax.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.937 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\ajax.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.655 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\ajax.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:60  column:4  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/load-interceptors![0m
+
+  [36m56[0m  [36m(defn mount-components [][0m
+  [36m57[0m  [36m  (reagent/render-component [page] (.getElementById js/document "app")))[0m
+  [36m58[0m  [36m[0m
+  [36m59[0m  [36m(defn init! [][0m
+  [33m60[0m  [1m  (load-interceptors!)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var picture-gallery.core/load-interceptors![0m
+  [36m61[0m  [36m  (session/put! :identity js/identity)[0m
+  [36m62[0m  [36m  (mount-components))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.91 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.712 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 11.576 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.115 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.634 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.129 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.944 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+Notifyng browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.832 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 6.028 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.556 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.522 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.726 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.526 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.335 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 9.967 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.064 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.116 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.39 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.142 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.176 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.274 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.273 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js

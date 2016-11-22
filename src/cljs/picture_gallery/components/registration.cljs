@@ -1,5 +1,5 @@
 (ns picture-gallery.components.registration
-  (:require [reagent.core :refer [atom]]
+  (:require [reagent.core :as r :refer [atom]]
             [picture-gallery.components.common :as c]
             [ajax.core :as ajax]
             [picture-gallery.validation :refer [registration-errors]]
@@ -16,16 +16,19 @@
                             (session/remove! :modal))
                 :error-handler #(reset! errors {:server-error (get-in % [:response :message])})})))
 
+
 (defn registration-form []
   (let [fields (atom {})
-        error (atom nil)]
+        error (atom nil)
+        submit-function! #(register! fields error)
+        remove-function! #(session/remove! :modal)]
     (fn []
-      [c/modal
+      [c/modal       
        [:div "Picture Gallery Registration"]
-       [:div
+       [:div        
         [:div.card.card-block.bg-faded
          [:strong "* required field"]]
-        [c/text-input "name" :id "enter a user name" fields]
+        [c/text-input-focus "name" :id "enter a user name" fields]
         (when-let [error (first (:id @error))]
           [:div.alert.alert-danger error])
         [c/password-input "password" :pass "enter a password" fields]
@@ -36,11 +39,14 @@
           [:div.alert.alert-danger error])]
        [:div
         [:button.btn.btn-primary.btn-space
-         {:on-click #(register! fields error)}
+         {:on-click submit-function!}
          "Register"]
         [:button.btn.btn-danger.btn-space
-         {:on-click #(session/remove! :modal)}
-         "Cancel"]]])))
+         {:on-click remove-function!}
+         "Cancel"]]
+       submit-function!
+       remove-function!])))
+
 
 (defn registration-button []
   [:button.btn.btn-info
@@ -53,17 +59,22 @@
                           (session/remove! :identity)
                           (session/put! :page :home))}))
 
-(defn delete-account-modal []
-  (fn []
-    [c/modal
-     [:div>h2.alert.alert-danger "Delete Account!"]
-     [:div>p "Are you sure you wish to delete the account and associated gallery?"]
-     [:div
-      [:button.btn.btn-primary.btn-space
-       {:on-click (fn []
-                    (delete-account!)
-                    (session/remove! :modal))}
-       "Delete"]
-      [:button.btn.btn-danger.btn-space
-       {:on-click (fn [] (session/remove! :modal))}
-       "Cancel"]]]))
+
+(defn delete-account-modal [] 
+  (let [submit-function! (fn []
+                           (delete-account!)
+                           (session/remove! :modal))
+        cancel-function! #(session/remove! :modal)]
+    (fn []
+      [c/modal
+       [:div>h2.alert.alert-danger "Delete Account!"]
+       [:div>p "Are you sure you wish to delete the account and associated gallery?"]
+       [:div
+        [:button.btn.btn-primary.btn-space
+         {:on-click submit-function!}
+         "Delete"]
+        [:button.btn.btn-danger.btn-space
+         {:on-click cancel-function!}
+         "Cancel"]]
+       submit-function!
+       cancel-function!])))

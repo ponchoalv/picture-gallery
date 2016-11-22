@@ -35,24 +35,28 @@
 
 (defn login-form []
   (let [fields (atom {})
-        error (atom nil)]
+        error (atom nil)
+        submit-function! #(login! fields error)
+        remove-function! #(session/remove! :modal)]
     (fn []
       [c/modal
        [:div "Picture Gallery Login"]
-       [:div
+       [:div 
         [:div.card.card-block.bg-faded
          [:strong "* required field"]]
-        [c/text-input "name" :id "enter a user name" fields]
+        [c/text-input-focus "name" :id "enter a user name" fields]
         [c/password-input "password" :pass "enter a password" fields]
         (when-let [error @error]
           [:div.alert.alert-danger error])]
        [:div
         [:button.btn.btn-primary.btn-space
-         {:on-click #(login! fields error)}
+         {:on-click submit-function!}
          "Login"]
         [:button.btn.btn-danger.btn-space
-         {:on-click #(session/remove! :modal)}
-         "Cancel"]]])))
+         {:on-click remove-function!}
+         "Cancel"]]
+       submit-function!
+       remove-function!])))
 
 (defn login-button []
   [:button.btn.btn-primary

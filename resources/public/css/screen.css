@@ -101,3 +101,7 @@ body {
 .user-actions {
     margin-left: -80px;
 }
+
+.modal-body {
+    outline: none;
+}

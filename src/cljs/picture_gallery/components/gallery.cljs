@@ -20,16 +20,20 @@
 (defn delete-image-button [owner name]
   (session/put! :modal
                 (fn []
-                  [c/modal
-                   [:p "Remove " name "?"]
-                   [:div [:img {:src (str "/gallery/" owner "/" name)}]]
-                   [:div
-                    [:button.btn.btn-primary.btn-space
-                     {:on-click #(delete-image! name)}
-                     "Delete"]
-                    [:button.btn.btn-danger.btn-space
-                     {:on-click #(session/remove! :modal)}
-                     "Cancel"]]])))
+                  (let [submit-function! #(delete-image! name)
+                        cancel-function!  #(session/remove! :modal)]
+                    [c/modal
+                     [:p "Remove " name "?"]
+                     [:div [:img {:src (str "/gallery/" owner "/" name)}]]
+                     [:div
+                      [:button.btn.btn-primary.btn-space
+                       {:on-click submit-function!}
+                       "Delete"]
+                      [:button.btn.btn-danger.btn-space
+                       {:on-click cancel-function!}
+                       "Cancel"]]
+                     submit-function!
+                     cancel-function!]))))
 
 (defn partition-links [links]
   (when links
@@ -75,7 +79,7 @@
              (rgb->str c3 0.9) ","
              (rgb->str c1 1) ")")))
 
-(defn ^:export image-panel-did-mount [thumb-link]
+(defn  image-panel-did-mount [thumb-link]
   (fn [div]
     (.getColors
      (js/AlbumColors. thumb-link)

@@ -28,7 +28,9 @@
 
 (defn upload-form []
   (let [status (atom nil)
-        form-id "upload-form"]
+        form-id "upload-form"
+        submit-function! #(upload-file! form-id status)
+        cancel-function! #(session/remove! :modal)]
     (fn []
       [c/modal
        [:div "Upload File"]
@@ -39,14 +41,16 @@
                 :method "POST"}
          [:div.form-group
           [:label {:for "file"} [:strong "Select an image for upload"]]
-          [:input {:id "file" :name "file" :type "file"}]]]]
+          [:input {:id "file" :name "file" :type "file" :auto-focus true}]]]]
        [:div 
         [:button.btn.btn-primary.btn-space
-         {:on-click #(upload-file! form-id status)}
+         {:on-click submit-function!}
          "Upload"]
         [:button.btn.btn-danger.btn-space
-         {:on-click #(session/remove! :modal)}
-         "Cancel"]]])))
+         {:on-click cancel-function!}
+         "Cancel"]]
+       #()
+       cancel-function!])))
 
 (defn upload-button []
   [:a.btn

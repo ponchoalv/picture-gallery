@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: 100%;
 }
 
@@ -96,4 +96,8 @@ body {
     left: 0;
     right: 0;
     padding:20px;
+}
+
+.user-actions {
+    margin-left: -80px;
 }

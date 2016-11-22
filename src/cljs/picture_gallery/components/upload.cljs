@@ -1,8 +1,10 @@
-(ns picture-gallery.components.upload
-  (:require [goog.events :as gev]
+(ns picture-gallery.components.upload 
+  (:require [clojure.string :as s]
+            [goog.events :as gev]
             [reagent.core :as reagent :refer [atom]]
             [reagent.session :as session]
-            [picture-gallery.components.common :as c])
+            [picture-gallery.components.common :as c]
+            [picture-gallery.components.gallery :refer [fetch-gallery-thumbs!]])
   (:import goog.net.IframeIo
            goog.net.EventType
            [goog.events EventType]))
@@ -12,14 +14,17 @@
   (let [io (IframeIo.)]
     (gev/listen io
                 goog.net.EventType.SUCCESS
-                #(reset! status [:div.alert.alert-success "file uploaded successfully"]))
+                #(do
+                   (fetch-gallery-thumbs! (session/get :identity))
+                   (session/put! :page :gallery)
+                   (reset! status [:div.alert.alert-success "file uploaded successfully"])))
     (gev/listen io
                 goog.net.EventType.ERROR
                 #(reset! status [:div.alert.alert-danger "failed to upload the file"]))
-    (.setErrorChecker io #(= "error" (.getResponseText io)))
+    (.setErrorChecker io #(s/includes? (.getResponseText io) "error"))
     (.sendFromForm io
                    (.getElementById js/document upload-form-id)
-                   "/upload")))
+                   "/private-api/upload")))
 
 (defn upload-form []
   (let [status (atom nil)
@@ -27,7 +32,7 @@
     (fn []
       [c/modal
        [:div "Upload File"]
-       [:div
+       [:div 
         (when @status @status)
         [:form {:id form-id
                 :enc-type "multipart/form-data"

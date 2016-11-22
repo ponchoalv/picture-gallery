@@ -1,7 +1,7 @@
 (ns picture-gallery.middleware
   (:require [picture-gallery.env :refer [defaults]]
             [clojure.tools.logging :as log]
-            [picture-gallery.layout :refer [*app-context* error-page]]
+            [picture-gallery.layout :refer [*identity* *app-context* error-page]]
             [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
             [ring.middleware.webjars :refer [wrap-webjars]]
             [ring.middleware.format :refer [wrap-restful-format]]
@@ -12,8 +12,7 @@
             [buddy.auth.middleware :refer [wrap-authentication wrap-authorization]]
             [buddy.auth.accessrules :refer [restrict]]
             [buddy.auth :refer [authenticated?]]
-            [buddy.auth.backends.session :refer [session-backend]]
-            [picture-gallery.layout :refer [*identity*]])
+            [buddy.auth.backends.session :refer [session-backend]])
   (:import [javax.servlet ServletContext]))
 
 (defn wrap-context [handler]
@@ -67,7 +66,7 @@
   (restrict handler {:handler authenticated?
                      :on-error on-error}))
 
-(defn wrap-identity [handler]
+(defn wrap-identity [handler] 
   (fn [request]
     (binding [*identity* (get-in request [:session :identity])]
       (handler request))))
@@ -80,11 +79,11 @@
         (wrap-authorization backend))))
 
 (defn wrap-base [handler]
-  (-> ((:middleware defaults) handler)
+  (-> ((:middleware defaults) handler) 
       wrap-auth
       wrap-webjars
       wrap-flash
-      (wrap-session {:cookie-attrs {:http-only true}})
+      (wrap-session {:cookie-attrs {:http-only true}}) 
       (wrap-defaults
        (-> site-defaults
            (assoc-in [:security :anti-forgery] false)

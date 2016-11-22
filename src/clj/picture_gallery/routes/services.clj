@@ -2,9 +2,12 @@
   (:require [picture-gallery.routes.services.auth :as auth]
             [picture-gallery.routes.services.upload :as upload]
             [picture-gallery.routes.services.gallery :as gallery]
+            [compojure.api.meta :refer [restructure-param]]
+            [buddy.auth.accessrules :refer [restrict]]
+            [buddy.auth :refer [authenticated?]] 
             [ring.util.http-response :refer :all]
             [compojure.api.sweet :refer :all]
-            [compojure.api.upload :refer :all]
+            [compojure.api.upload :refer :all]            
             [schema.core :as s]))
 
 (s/defschema UserRegistration
@@ -20,6 +23,26 @@
   {:owner               String
    :name                String
    (s/optional-key :rk) s/Num})
+
+(s/defschema Images
+  {:image-name String
+   :thumb-name String})
+
+
+(defn access-error [_ _]
+  (unauthorized {:error "unauthorized"}))
+
+(defn wrap-restricted [handler rule]
+  (restrict handler {:handler  rule
+                     :on-error access-error}))
+
+(defmethod restructure-param :auth-rules
+  [_ rule acc]
+  (update-in acc [:middleware] conj [wrap-restricted rule]))
+
+(defmethod restructure-param :current-user
+  [_ binding acc]
+  (update-in acc [:letks] into [binding `(:identity ~'+compojure-api-request+)]))
 
 (defapi service-routes
   {:swagger {:ui "/swagger-ui"
@@ -54,22 +77,26 @@
   (GET "/list-galleries" []
        :summary "lists a thumbnail for each user"
        :return [Gallery]
-       (gallery/list-galleries)))
+       (gallery/list-galleries))
 
-(defapi restricted-service-routes
-  {:swagger {:ui "/swagger-ui-private"
-             :spec "/swagger-private.json"
-             :data {:info {:version "1.0.0"
-                           :title "Picture Gallery API"
-                           :description "Private Services"}}}}
-  (POST "/upload" req
-        :multipart-params [file :- TempFileUpload]
-        :middleware [wrap-multipart-params]
-        :summary "handles image upload"
-        :return Result
-        (upload/save-image! (:identity req) file))
-  (POST "/delete-image" req
-        :body-params [image-name :- String thumb-name :- String]
-        :summary "delete the specified file from the database"
-        :return Result
-        (gallery/delete-image! (:identity req) thumb-name image-name)))
+  (context "/private-api" []
+           
+           :auth-rules authenticated?
+           
+           :tags ["private"]
+           
+           (POST "/delete-image" req
+                 :body [images Images]
+                 :summary "delete the specified file from the database"
+                 :return Result
+                 (gallery/delete-image! (:identity req) (:thumb-name images)  (:image-name images)))
+
+           (POST "/upload" req
+                 :multipart-params [file :- TempFileUpload]
+                 :middleware [wrap-multipart-params]
+                 :summary "handles image upload"
+                 :return Result
+                 (upload/save-image! (:identity req) file))
+
+           (POST "/delete-account" req
+                 (auth/delete-account! (:identity req)))))

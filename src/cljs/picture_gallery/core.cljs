@@ -12,16 +12,29 @@
             [ajax.core :as ajax])
   (:import goog.History))
 
+(defn account-actions [id]
+  (let [expanded? (atom false)]
+    (fn []
+      [:div.dropdown
+       {:class (when @expanded? "open")
+        :on-click #(swap! expanded? not)}
+       [:button.btn.btn-secondary.dropdown-toggle
+        {:type :button}
+        [:i.fa.fa-fw.fa-user-circle {:aria-hidden "true"}] " " id [:span.caret]]
+       [:div.dropdown-menu.user-actions
+        [:a.dropdown-item.btn
+         {:on-click #(session/put! :modal reg/delete-account-modal)}
+         [:i.icon-remove-sign] "delete account"]
+        [:a.dropdown-item.btn
+         {:on-click #(ajax/POST "/logout"
+                                {:handler (fn [] (session/remove! :identity))})}
+         [:i.fa.fa-sign-out] "sign out"]]])))
+
 (defn user-menu []
   (if-let [id (session/get :identity)]
     [:ul.nav.navbar-nav.pull-right
      [:li.nav-item [u/upload-button]]
-     [:li.nav-item
-      [:button.dropdown-item.btn
-       {:on-click #(ajax/POST
-                    "/logout"
-                    {:handler (fn [] (session/remove! :identity))})}
-       [:i.fa.fa-user] " " id " | sign out"]]]
+     [:li.nav-item [account-actions id]]]
     [:ul.nav.navbar-nav.pull-right
      [:li.nav-item [l/login-button]]
      [:li.nav-item [reg/registration-button]]]))
@@ -38,7 +51,7 @@
     (fn []
       [:nav.navbar.navbar-light.bg-faded
        [:button.navbar-toggler.hidden-sm-up
-        {:on-click #(swap! collapsed? not)} "☰"]
+        {:on-click #(swap! collapsed? not)} [:i.fa.fa-bars]]
        [:div.collapse.navbar-toggleable-xs
         (when-not @collapsed? {:class "in"})
         [:a.navbar-brand {:href "#/"} "Picture Gallery!"]
@@ -101,11 +114,12 @@
 (secretary/defroute "/about" []
   (session/put! :page :about))
 
+
 (defn hook-browser-navigation! []
   (doto (History.)
     (events/listen
      EventType/NAVIGATE
-     (fn [event]
+     (fn [event] 
        (secretary/dispatch! (.-token event))))
     (.setEnabled true)))
 

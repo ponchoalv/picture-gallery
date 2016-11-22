@@ -2,7 +2,7 @@
   (:require [compojure.core :refer [routes wrap-routes]]
             [picture-gallery.layout :refer [error-page]]
             [picture-gallery.routes.home :refer [home-routes]]
-            [picture-gallery.routes.services :refer [service-routes restricted-service-routes]]
+            [picture-gallery.routes.services :refer [service-routes]]
             [compojure.route :as route]
             [picture-gallery.env :refer [defaults]]
             [mount.core :as mount]
@@ -14,16 +14,11 @@
 
 (def app-routes
   (routes
-   (-> #'home-routes
-       (wrap-routes middleware/wrap-csrf)
-       (wrap-routes middleware/wrap-formats))
-   (-> #'restricted-service-routes
-       (wrap-routes middleware/wrap-auth))   
    #'service-routes
-   (route/not-found
+   (wrap-routes #'home-routes middleware/wrap-csrf) 
+   (route/not-found 
     (:body
      (error-page {:status 404
                   :title "page not found"})))))
-
 
 (defn app [] (middleware/wrap-base #'app-routes))

@@ -47,3 +47,23 @@
    {:on-click #(session/put! :modal registration-form)}
    "Register"])
 
+(defn delete-account! []
+  (ajax/POST "/private-api/delete-account"
+             {:handler #(do
+                          (session/remove! :identity)
+                          (session/put! :page :home))}))
+
+(defn delete-account-modal []
+  (fn []
+    [c/modal
+     [:div>h2.alert.alert-danger "Delete Account!"]
+     [:div>p "Are you sure you wish to delete the account and associated gallery?"]
+     [:div
+      [:button.btn.btn-primary.btn-space
+       {:on-click (fn []
+                    (delete-account!)
+                    (session/remove! :modal))}
+       "Delete"]
+      [:button.btn.btn-danger.btn-space
+       {:on-click (fn [] (session/remove! :modal))}
+       "Cancel"]]]))

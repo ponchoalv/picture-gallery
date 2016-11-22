@@ -23,7 +23,7 @@
                  [org.webjars.bower/tether "1.3.7"]
                  [org.webjars/bootstrap "4.0.0-alpha.5"]
                  [org.webjars/jquery "3.1.1"] 
-                 [org.webjars/font-awesome "4.6.3"]
+                 [org.webjars/font-awesome "4.7.0"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [ring-middleware-format "0.7.0"]
                  [ring-webjars "0.1.1"]
@@ -63,16 +63,18 @@
              :cljsbuild
              {:builds
               {:min
-               {:source-paths ["src/cljc" "src/cljs" "env/prod/cljs"]
+               {:source-paths ["src/cljs" "env/prod/cljs"]
                 :compiler
-                {:output-to "target/cljsbuild/public/js/app.js"
-                 :externs ["react/externs/react.js"]
+                {
+                 :output-to "target/cljsbuild/public/js/app.js"
+                 :output-dir "target/cljsbuild/public/js/out"
+                 :externs ["react/externs/react.js"
+                           "externs/albumcolors.js"]
                  :optimizations :advanced
+                 :optimize-constants true
                  :pretty-print false
                  :closure-warnings
                  {:externs-validation :off :non-standard-jsdoc :off}}}}}
-             
-             
              :aot :all
              :uberjar-name "picture-gallery.jar"
              :source-paths ["env/prod/clj"]
@@ -123,8 +125,8 @@
                      {:output-to "target/test.js"
                       :main "picture-gallery.doo-runner"
                       :optimizations :whitespace
-                      :pretty-print true}}}}
-                  
-                  }
+                      :pretty-print true}}}}}
+   
+   
    :profiles/dev {}
    :profiles/test {}})

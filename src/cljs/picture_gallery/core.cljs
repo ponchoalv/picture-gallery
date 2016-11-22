@@ -24,11 +24,11 @@
        [:div.dropdown-menu.user-actions
         [:a.dropdown-item.btn
          {:on-click #(session/put! :modal reg/delete-account-modal)}
-         [:i.icon-remove-sign] "delete account"]
+         [:i.fa.fa-times] "  delete account"]
         [:a.dropdown-item.btn
          {:on-click #(ajax/POST "/logout"
                                 {:handler (fn [] (session/remove! :identity))})}
-         [:i.fa.fa-sign-out] "sign out"]]])))
+         [:i.fa.fa-sign-out] "  sign out"]]])))
 
 (defn user-menu []
   (if-let [id (session/get :identity)]

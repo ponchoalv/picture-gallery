@@ -39,7 +39,8 @@
                 :method "POST"}
          [:div.form-group
           [:label {:for "file"} [:strong "Select an image for upload"]]
-          [:input {:id "file" :name "file" :type "file"}]]]
+          [:input {:id "file" :name "file" :type "file"}]]]]
+       [:div 
         [:button.btn.btn-primary.btn-space
          {:on-click #(upload-file! form-id status)}
          "Upload"]
@@ -50,4 +51,4 @@
 (defn upload-button []
   [:a.btn
    {:on-click #(session/put! :modal upload-form)}
-   "upload image"])
+   [:i.fa.fa-fw.fa-cloud-upload] " upload image"])

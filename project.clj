@@ -33,7 +33,8 @@
                  [cljs-ajax "0.5.8"]
                  [reagent "0.6.0"]
                  [reagent-utils "0.2.0"]
-                 [secretary "1.2.3"]]
+                 [secretary "1.2.3"]
+                 [venantius/accountant "0.1.7"]]
   
   :min-lein-version "2.0.0"
   

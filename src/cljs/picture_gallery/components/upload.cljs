@@ -1,5 +1,6 @@
 (ns picture-gallery.components.upload 
   (:require [clojure.string :as s]
+            [picture-gallery.router :as r]
             [goog.events :as gev]
             [reagent.core :as reagent :refer [atom]]
             [reagent.session :as session]
@@ -16,7 +17,7 @@
                 goog.net.EventType.SUCCESS
                 #(do
                    (fetch-gallery-thumbs! (session/get :identity))
-                   (session/put! :page :gallery)
+                   (r/trans (r/gallery {:owner (session/get :identity)}))
                    (reset! status [:div.alert.alert-success "file uploaded successfully"])))
     (gev/listen io
                 goog.net.EventType.ERROR

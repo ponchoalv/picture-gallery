@@ -2997,3 +2997,1584 @@ Notifyng browser that CSS file changed: resources/public/css/screen.css
 Notifyng browser that CSS file changed: resources/public/css/screen.css
 Notifyng browser that CSS file changed: resources/public/css/screen.css
 Notifyng browser that CSS file changed: resources/public/css/screen.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 10.368 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 4.508 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\gallery.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:74  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/galleries[0m
+
+  [36m70[0m  [36m     [:div.row[0m
+  [36m71[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m72[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m73[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m74[0m  [1m        [galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.core/galleries[0m
+  [36m75[0m  [36m[0m
+  [36m76[0m  [36m(defn about-page [][0m
+  [36m77[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m78[0m  [36m[0m
+  [36m79[0m  [36m(def pages[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:120  column:14  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/session[0m
+
+  [36m116[0m  [36m(defn page [][0m
+  [36m117[0m  [36m  [:div [0m
+  [36m118[0m  [36m   [modal] [0m
+  [36m119[0m  [36m   [(do[0m
+  [33m120[0m  [1m      (when (session) [0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/session[0m
+  [36m121[0m  [36m          (.setToken history ((session/get :page) routes)))[0m
+  [36m122[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m123[0m  [36m[0m
+  [36m124[0m  [36m(defn mount-components [][0m
+  [36m125[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.475 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:74  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/galleries[0m
+
+  [36m70[0m  [36m     [:div.row[0m
+  [36m71[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m72[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m73[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m74[0m  [1m        [galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.core/galleries[0m
+  [36m75[0m  [36m[0m
+  [36m76[0m  [36m(defn about-page [][0m
+  [36m77[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m78[0m  [36m[0m
+  [36m79[0m  [36m(def pages[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:119  column:14  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/session[0m
+
+  [36m115[0m  [36m(defn page [][0m
+  [36m116[0m  [36m  [:div [0m
+  [36m117[0m  [36m   [modal] [0m
+  [36m118[0m  [36m   [(do[0m
+  [33m119[0m  [1m      (when (session) [0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/session[0m
+  [36m120[0m  [36m          (.setToken history ((session/get :page) routes)))[0m
+  [36m121[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m122[0m  [36m[0m
+  [36m123[0m  [36m(defn mount-components [][0m
+  [36m124[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.382 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:59  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/home[0m
+
+  [36m55[0m  [36m[:div.collapse.navbar-toggleable-xs[0m
+  [36m56[0m  [36m (when-not @collapsed? {:class "in"})[0m
+  [36m57[0m  [36m [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m58[0m  [36m [:ul.nav.navbar-nav[0m
+  [33m59[0m  [1m  [nav-link (home) "Home" :home collapsed?][0m
+  [0m  [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/home[0m
+  [36m60[0m  [36m  [nav-link (about) "About" :about collapsed?]][0m
+  [36m61[0m  [36m [user-menu]]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:60  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/about[0m
+
+  [36m56[0m  [36m(when-not @collapsed? {:class "in"})[0m
+  [36m57[0m  [36m[:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m58[0m  [36m[:ul.nav.navbar-nav[0m
+  [36m59[0m  [36m [nav-link (home) "Home" :home collapsed?][0m
+  [33m60[0m  [1m [nav-link (about) "About" :about collapsed?]][0m
+  [0m  [0m  [33m            ^--- Use of undeclared Var picture-gallery.core/about[0m
+  [36m61[0m  [36m[user-menu]]])))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:74  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/galleries[0m
+
+  [36m70[0m  [36m     [:div.row[0m
+  [36m71[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m72[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m73[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m74[0m  [1m        [galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.core/galleries[0m
+  [36m75[0m  [36m[0m
+  [36m76[0m  [36m(defn about-page [][0m
+  [36m77[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m78[0m  [36m[0m
+  [36m79[0m  [36m(def pages[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:119  column:14  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/session[0m
+
+  [36m115[0m  [36m(defn page [][0m
+  [36m116[0m  [36m  [:div [0m
+  [36m117[0m  [36m   [modal] [0m
+  [36m118[0m  [36m   [(do[0m
+  [33m119[0m  [1m      (when (session) [0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/session[0m
+  [36m120[0m  [36m          (.setToken history ((session/get :page) routes)))[0m
+  [36m121[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m122[0m  [36m[0m
+  [36m123[0m  [36m(defn mount-components [][0m
+  [36m124[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.187 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:59  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/home[0m
+
+  [36m55[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+  [36m56[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m57[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m58[0m  [36m        [:ul.nav.navbar-nav[0m
+  [33m59[0m  [1m         [nav-link (home) "Home" :home collapsed?][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/home[0m
+  [36m60[0m  [36m         [nav-link (about) "About" :about collapsed?]][0m
+  [36m61[0m  [36m        [user-menu]]])))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m[0m
+  [36m64[0m  [36m(defn home-page [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:60  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/about[0m
+
+  [36m56[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m57[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m58[0m  [36m        [:ul.nav.navbar-nav[0m
+  [36m59[0m  [36m         [nav-link (home) "Home" :home collapsed?][0m
+  [33m60[0m  [1m         [nav-link (about) "About" :about collapsed?]][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/about[0m
+  [36m61[0m  [36m        [user-menu]]])))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m[0m
+  [36m64[0m  [36m(defn home-page [][0m
+  [36m65[0m  [36m  (g/list-galleries!)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:117  column:14  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/session[0m
+
+  [36m113[0m  [36m(defn page [][0m
+  [36m114[0m  [36m  [:div [0m
+  [36m115[0m  [36m   [modal] [0m
+  [36m116[0m  [36m   [(do[0m
+  [33m117[0m  [1m      (when (session) [0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/session[0m
+  [36m118[0m  [36m          (.setToken history ((session/get :page) routes)))[0m
+  [36m119[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m120[0m  [36m[0m
+  [36m121[0m  [36m(defn mount-components [][0m
+  [36m122[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.185 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:59  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/home[0m
+
+  [36m55[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+  [36m56[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m57[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m58[0m  [36m        [:ul.nav.navbar-nav[0m
+  [33m59[0m  [1m         [nav-link (home) "Home" :home collapsed?][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/home[0m
+  [36m60[0m  [36m         [nav-link (about) "About" :about collapsed?]][0m
+  [36m61[0m  [36m        [user-menu]]])))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m[0m
+  [36m64[0m  [36m(defn home-page [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:60  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/about[0m
+
+  [36m56[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m57[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m58[0m  [36m        [:ul.nav.navbar-nav[0m
+  [36m59[0m  [36m         [nav-link (home) "Home" :home collapsed?][0m
+  [33m60[0m  [1m         [nav-link (about) "About" :about collapsed?]][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/about[0m
+  [36m61[0m  [36m        [user-menu]]])))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m[0m
+  [36m64[0m  [36m(defn home-page [][0m
+  [36m65[0m  [36m  (g/list-galleries!)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:117  column:14  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/session[0m
+
+  [36m113[0m  [36m(defn page [][0m
+  [36m114[0m  [36m  [:div [0m
+  [36m115[0m  [36m   [modal] [0m
+  [36m116[0m  [36m   [(do[0m
+  [33m117[0m  [1m      (when (session) [0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/session[0m
+  [36m118[0m  [36m          (.setToken history ((session/get :page) routes)))[0m
+  [36m119[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m120[0m  [36m[0m
+  [36m121[0m  [36m(defn mount-components [][0m
+  [36m122[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.346 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\gallery.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:58  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/home[0m
+
+  [36m54[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+  [36m55[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m56[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m57[0m  [36m        [:ul.nav.navbar-nav[0m
+  [33m58[0m  [1m         [nav-link (home) "Home" :home collapsed?][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/home[0m
+  [36m59[0m  [36m         [nav-link (about) "About" :about collapsed?]][0m
+  [36m60[0m  [36m        [user-menu]]])))[0m
+  [36m61[0m  [36m[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m(defn home-page [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:59  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/about[0m
+
+  [36m55[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m56[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m57[0m  [36m        [:ul.nav.navbar-nav[0m
+  [36m58[0m  [36m         [nav-link (home) "Home" :home collapsed?][0m
+  [33m59[0m  [1m         [nav-link (about) "About" :about collapsed?]][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/about[0m
+  [36m60[0m  [36m        [user-menu]]])))[0m
+  [36m61[0m  [36m[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m(defn home-page [][0m
+  [36m64[0m  [36m  (g/list-galleries!)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:98  column:18  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/History[0m
+
+  [36m 95[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m 96[0m  [36m  (session/put! :page :about))[0m
+  [36m 97[0m  [36m[0m
+  [33m 98[0m  [1m(defonce history (History.))[0m
+  [0m   [0m  [33m                 ^--- Use of undeclared Var picture-gallery.core/History[0m
+  [36m 99[0m  [36m[0m
+  [36m100[0m  [36m(defn hook-browser-navigation! [][0m
+  [36m101[0m  [36m  (doto history[0m
+  [36m102[0m  [36m    (events/listen[0m
+  [36m103[0m  [36m     EventType/NAVIGATE[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:98  column:18  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/History[0m
+
+  [36m 95[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m 96[0m  [36m  (session/put! :page :about))[0m
+  [36m 97[0m  [36m[0m
+  [33m 98[0m  [1m(defonce history (History.))[0m
+  [0m   [0m  [33m                 ^--- Use of undeclared Var picture-gallery.core/History[0m
+  [36m 99[0m  [36m[0m
+  [36m100[0m  [36m(defn hook-browser-navigation! [][0m
+  [36m101[0m  [36m  (doto history[0m
+  [36m102[0m  [36m    (events/listen[0m
+  [36m103[0m  [36m     EventType/NAVIGATE[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:112  column:14  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/session[0m
+
+  [36m108[0m  [36m(defn page [][0m
+  [36m109[0m  [36m  [:div [0m
+  [36m110[0m  [36m   [modal] [0m
+  [36m111[0m  [36m   [(do[0m
+  [33m112[0m  [1m      (when (session) [0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/session[0m
+  [36m113[0m  [36m          (.setToken history ((session/get :page) routes)))[0m
+  [36m114[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m115[0m  [36m[0m
+  [36m116[0m  [36m(defn mount-components [][0m
+  [36m117[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:113  column:51  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/routes[0m
+
+  [36m109[0m  [36m  [:div [0m
+  [36m110[0m  [36m   [modal] [0m
+  [36m111[0m  [36m   [(do[0m
+  [36m112[0m  [36m      (when (session) [0m
+  [33m113[0m  [1m          (.setToken history ((session/get :page) routes)))[0m
+  [0m   [0m  [33m                                                  ^--- Use of undeclared Var picture-gallery.core/routes[0m
+  [36m114[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m115[0m  [36m[0m
+  [36m116[0m  [36m(defn mount-components [][0m
+  [36m117[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+  [36m118[0m  [36m  (reagent/render [#'page] (.getElementById js/document "app")))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.261 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:57  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/home[0m
+
+  [36m53[0m  [36m       [:div.collapse.navbar-toggleable-xs[0m
+  [36m54[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m55[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m56[0m  [36m        [:ul.nav.navbar-nav[0m
+  [33m57[0m  [1m         [nav-link (home) "Home" :home collapsed?][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/home[0m
+  [36m58[0m  [36m         [nav-link (about) "About" :about collapsed?]][0m
+  [36m59[0m  [36m        [user-menu]]])))[0m
+  [36m60[0m  [36m[0m
+  [36m61[0m  [36m[0m
+  [36m62[0m  [36m(defn home-page [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:58  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/about[0m
+
+  [36m54[0m  [36m        (when-not @collapsed? {:class "in"})[0m
+  [36m55[0m  [36m        [:a.navbar-brand {:href "#/"} "Picture Gallery!"][0m
+  [36m56[0m  [36m        [:ul.nav.navbar-nav[0m
+  [36m57[0m  [36m         [nav-link (home) "Home" :home collapsed?][0m
+  [33m58[0m  [1m         [nav-link (about) "About" :about collapsed?]][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/about[0m
+  [36m59[0m  [36m        [user-menu]]])))[0m
+  [36m60[0m  [36m[0m
+  [36m61[0m  [36m[0m
+  [36m62[0m  [36m(defn home-page [][0m
+  [36m63[0m  [36m  (g/list-galleries!)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:85  column:2  ----[0m
+
+  [1mNo such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+
+  [36m81[0m  [36m  (when-let [session-modal (session/get :modal)] [0m
+  [36m82[0m  [36m    [session-modal]))[0m
+  [36m83[0m  [36m[0m
+  [36m84[0m  [36m[0m
+  [33m85[0m  [1m(secretary/set-config! :prefix "#")[0m
+  [0m  [0m  [33m ^--- No such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+  [36m86[0m  [36m[0m
+  [36m87[0m  [36m(secretary/defroute home "/" [][0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:85  column:2  ----[0m
+
+  [1mUse of undeclared Var secretary/set-config![0m
+
+  [36m81[0m  [36m  (when-let [session-modal (session/get :modal)] [0m
+  [36m82[0m  [36m    [session-modal]))[0m
+  [36m83[0m  [36m[0m
+  [36m84[0m  [36m[0m
+  [33m85[0m  [1m(secretary/set-config! :prefix "#")[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var secretary/set-config![0m
+  [36m86[0m  [36m[0m
+  [36m87[0m  [36m(secretary/defroute home "/" [][0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:87  column:2  ----[0m
+
+  [1mNo such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+
+  [36m85[0m  [36m(secretary/set-config! :prefix "#")[0m
+  [36m86[0m  [36m[0m
+  [33m87[0m  [1m(secretary/defroute home "/" [][0m
+  [0m  [0m  [33m ^--- No such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:87  column:2  ----[0m
+
+  [1mUse of undeclared Var secretary/defroute[0m
+
+  [36m85[0m  [36m(secretary/set-config! :prefix "#")[0m
+  [36m86[0m  [36m[0m
+  [33m87[0m  [1m(secretary/defroute home "/" [][0m
+  [0m  [0m  [33m ^--- Use of undeclared Var secretary/defroute[0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:87  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/home[0m
+
+  [36m85[0m  [36m(secretary/set-config! :prefix "#")[0m
+  [36m86[0m  [36m[0m
+  [33m87[0m  [1m(secretary/defroute home "/" [][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/home[0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:90  column:2  ----[0m
+
+  [1mNo such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+
+  [36m87[0m  [36m(secretary/defroute home "/" [][0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [33m90[0m  [1m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [0m  [0m  [33m ^--- No such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [36m94[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:90  column:2  ----[0m
+
+  [1mUse of undeclared Var secretary/defroute[0m
+
+  [36m87[0m  [36m(secretary/defroute home "/" [][0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [33m90[0m  [1m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [0m  [0m  [33m ^--- Use of undeclared Var secretary/defroute[0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [36m94[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:90  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/gallery[0m
+
+  [36m87[0m  [36m(secretary/defroute home "/" [][0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [33m90[0m  [1m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/gallery[0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [36m94[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:90  column:48  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/owner[0m
+
+  [36m87[0m  [36m(secretary/defroute home "/" [][0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [33m90[0m  [1m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [0m  [0m  [33m                                               ^--- Use of undeclared Var picture-gallery.core/owner[0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [36m94[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:91  column:28  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/owner[0m
+
+  [36m87[0m  [36m(secretary/defroute home "/" [][0m
+  [36m88[0m  [36m  (session/put! :page :home))[0m
+  [36m89[0m  [36m[0m
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [33m91[0m  [1m  (g/fetch-gallery-thumbs! owner)[0m
+  [0m  [0m  [33m                           ^--- Use of undeclared Var picture-gallery.core/owner[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [36m94[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:94  column:2  ----[0m
+
+  [1mNo such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [33m94[0m  [1m(secretary/defroute about "/about" [][0m
+  [0m  [0m  [33m ^--- No such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+  [36m96[0m  [36m[0m
+  [36m97[0m  [36m(defonce history (History.))[0m
+  [36m98[0m  [36m[0m
+  [36m99[0m  [36m(defn hook-browser-navigation! [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:94  column:2  ----[0m
+
+  [1mUse of undeclared Var secretary/defroute[0m
+
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [33m94[0m  [1m(secretary/defroute about "/about" [][0m
+  [0m  [0m  [33m ^--- Use of undeclared Var secretary/defroute[0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+  [36m96[0m  [36m[0m
+  [36m97[0m  [36m(defonce history (History.))[0m
+  [36m98[0m  [36m[0m
+  [36m99[0m  [36m(defn hook-browser-navigation! [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:94  column:21  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/about[0m
+
+  [36m90[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [36m91[0m  [36m  (g/fetch-gallery-thumbs! owner)[0m
+  [36m92[0m  [36m  (session/put! :page :gallery))[0m
+  [36m93[0m  [36m[0m
+  [33m94[0m  [1m(secretary/defroute about "/about" [][0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var picture-gallery.core/about[0m
+  [36m95[0m  [36m  (session/put! :page :about))[0m
+  [36m96[0m  [36m[0m
+  [36m97[0m  [36m(defonce history (History.))[0m
+  [36m98[0m  [36m[0m
+  [36m99[0m  [36m(defn hook-browser-navigation! [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:97  column:18  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/History[0m
+
+  [36m 94[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m 95[0m  [36m  (session/put! :page :about))[0m
+  [36m 96[0m  [36m[0m
+  [33m 97[0m  [1m(defonce history (History.))[0m
+  [0m   [0m  [33m                 ^--- Use of undeclared Var picture-gallery.core/History[0m
+  [36m 98[0m  [36m[0m
+  [36m 99[0m  [36m(defn hook-browser-navigation! [][0m
+  [36m100[0m  [36m  (doto history[0m
+  [36m101[0m  [36m    (events/listen[0m
+  [36m102[0m  [36m     EventType/NAVIGATE[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:97  column:18  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/History[0m
+
+  [36m 94[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m 95[0m  [36m  (session/put! :page :about))[0m
+  [36m 96[0m  [36m[0m
+  [33m 97[0m  [1m(defonce history (History.))[0m
+  [0m   [0m  [33m                 ^--- Use of undeclared Var picture-gallery.core/History[0m
+  [36m 98[0m  [36m[0m
+  [36m 99[0m  [36m(defn hook-browser-navigation! [][0m
+  [36m100[0m  [36m  (doto history[0m
+  [36m101[0m  [36m    (events/listen[0m
+  [36m102[0m  [36m     EventType/NAVIGATE[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:104  column:9  ----[0m
+
+  [1mNo such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+
+  [36m100[0m  [36m  (doto history[0m
+  [36m101[0m  [36m    (events/listen[0m
+  [36m102[0m  [36m     EventType/NAVIGATE[0m
+  [36m103[0m  [36m     (fn [event] [0m
+  [33m104[0m  [1m       (secretary/dispatch! (.-token event))))[0m
+  [0m   [0m  [33m        ^--- No such namespace: secretary, could not locate secretary.cljs, secretary.cljc, or Closure namespace ""[0m
+  [36m105[0m  [36m    (.setEnabled true)))[0m
+  [36m106[0m  [36m[0m
+  [36m107[0m  [36m(defn page [][0m
+  [36m108[0m  [36m  [:div [0m
+  [36m109[0m  [36m   [modal] [0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:104  column:9  ----[0m
+
+  [1mUse of undeclared Var secretary/dispatch![0m
+
+  [36m100[0m  [36m  (doto history[0m
+  [36m101[0m  [36m    (events/listen[0m
+  [36m102[0m  [36m     EventType/NAVIGATE[0m
+  [36m103[0m  [36m     (fn [event] [0m
+  [33m104[0m  [1m       (secretary/dispatch! (.-token event))))[0m
+  [0m   [0m  [33m        ^--- Use of undeclared Var secretary/dispatch![0m
+  [36m105[0m  [36m    (.setEnabled true)))[0m
+  [36m106[0m  [36m[0m
+  [36m107[0m  [36m(defn page [][0m
+  [36m108[0m  [36m  [:div [0m
+  [36m109[0m  [36m   [modal] [0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:111  column:14  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/session[0m
+
+  [36m107[0m  [36m(defn page [][0m
+  [36m108[0m  [36m  [:div [0m
+  [36m109[0m  [36m   [modal] [0m
+  [36m110[0m  [36m   [(do[0m
+  [33m111[0m  [1m      (when (session) [0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var picture-gallery.core/session[0m
+  [36m112[0m  [36m          (.setToken history ((session/get :page) routes)))[0m
+  [36m113[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m114[0m  [36m[0m
+  [36m115[0m  [36m(defn mount-components [][0m
+  [36m116[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:112  column:51  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/routes[0m
+
+  [36m108[0m  [36m  [:div [0m
+  [36m109[0m  [36m   [modal] [0m
+  [36m110[0m  [36m   [(do[0m
+  [36m111[0m  [36m      (when (session) [0m
+  [33m112[0m  [1m          (.setToken history ((session/get :page) routes)))[0m
+  [0m   [0m  [33m                                                  ^--- Use of undeclared Var picture-gallery.core/routes[0m
+  [36m113[0m  [36m      (pages (session/get :page)))]])[0m
+  [36m114[0m  [36m[0m
+  [36m115[0m  [36m(defn mount-components [][0m
+  [36m116[0m  [36m  (reagent/render [#'navbar] (.getElementById js/document "navbar"))[0m
+  [36m117[0m  [36m  (reagent/render [#'page] (.getElementById js/document "app")))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.231 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.732 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/core.cljs  ----[0m
+
+  [1mNo such namespace: picture-gallery.routes, could not locate picture_gallery/routes.cljs, picture_gallery/routes.cljc, or Closure namespace "picture-gallery.routes" [0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.824 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/core.cljs  ----[0m
+
+  [1mNo such namespace: picture-gallery.routes, could not locate picture_gallery/routes.cljs, picture_gallery/routes.cljc, or Closure namespace "picture-gallery.routes" [0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.749 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/core.cljs  ----[0m
+
+  [1mNo such namespace: picture-gallery.routes, could not locate picture_gallery/routes.cljs, picture_gallery/routes.cljc, or Closure namespace "picture-gallery.routes" [0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.077 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:1  column:1  ----[0m
+
+  [1mOnly :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.router[0m
+  [0m [0m  [33m^--- Only :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+  [36m2[0m  [36m  (:requiere [secretary.core :as secretary :include-macros true][0m
+  [36m3[0m  [36m             [reagent.session :as session][0m
+  [36m4[0m  [36m             [accountant.core :as accountant]))[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.089 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:1  column:1  ----[0m
+
+  [1mOnly :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.router[0m
+  [0m [0m  [33m^--- Only :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+  [36m2[0m  [36m  (:requiere [secretary.core :as secretary :include-macros true][0m
+  [36m3[0m  [36m             [reagent.core :as reagent :refer [atom]][0m
+  [36m4[0m  [36m             [reagent.session :as session][0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.088 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:1  column:1  ----[0m
+
+  [1mOnly :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.router[0m
+  [0m [0m  [33m^--- Only :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+  [36m2[0m  [36m  (:requiere [secretary.core :as secretary :include-macros true][0m
+  [36m3[0m  [36m             [reagent.core :as reagent :refer [atom]][0m
+  [36m4[0m  [36m             [reagent.session :as session][0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.09 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:1  column:1  ----[0m
+
+  [1mOnly :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.router[0m
+  [0m [0m  [33m^--- Only :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+  [36m2[0m  [36m  (:requiere [secretary.core :as secretary :include-macros true][0m
+  [36m3[0m  [36m             [reagent.core :as reagent :refer [atom]][0m
+  [36m4[0m  [36m             [reagent.session :as session][0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.071 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:1  column:1  ----[0m
+
+  [1mOnly :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.router[0m
+  [0m [0m  [33m^--- Only :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+  [36m2[0m  [36m  (:requiere [secretary.core :as secretary :include-macros true][0m
+  [36m3[0m  [36m             [reagent.core :as reagent :refer [atom]][0m
+  [36m4[0m  [36m             [reagent.session :as session][0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.143 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:1  column:1  ----[0m
+
+  [1mOnly :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+
+  [33m1[0m  [1m(ns picture-gallery.router[0m
+  [0m [0m  [33m^--- Only :refer-clojure, :require, :require-macros, :use, :use-macros, and :import libspecs supported at line 1 src\cljs\picture_gallery\router.cljs[0m
+  [36m2[0m  [36m  (:requiere [secretary.core :as secretary :include-macros true][0m
+  [36m3[0m  [36m             [reagent.core :as reagent :refer [atom]][0m
+  [36m4[0m  [36m             [reagent.session :as session][0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:14  column:4  ----[0m
+
+  [1mNo such namespace: g, could not locate g.cljs, g.cljc, or Closure namespace ""[0m
+
+  [36m10[0m  [36m  (session/put! :page :home)[0m
+  [36m11[0m  [36m  (reset! active-page :home))[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [33m14[0m  [1m  (g/fetch-gallery-thumbs! owner)[0m
+  [0m  [0m  [33m   ^--- No such namespace: g, could not locate g.cljs, g.cljc, or Closure namespace ""[0m
+  [36m15[0m  [36m  (session/put! :page :gallery))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m18[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:14  column:4  ----[0m
+
+  [1mUse of undeclared Var g/fetch-gallery-thumbs![0m
+
+  [36m10[0m  [36m  (session/put! :page :home)[0m
+  [36m11[0m  [36m  (reset! active-page :home))[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [33m14[0m  [1m  (g/fetch-gallery-thumbs! owner)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var g/fetch-gallery-thumbs![0m
+  [36m15[0m  [36m  (session/put! :page :gallery))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m18[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:14  column:4  ----[0m
+
+  [1mNo such namespace: g, could not locate g.cljs, g.cljc, or Closure namespace ""[0m
+
+  [36m10[0m  [36m  (session/put! :page :home)[0m
+  [36m11[0m  [36m  (reset! active-page :home))[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [33m14[0m  [1m  (g/fetch-gallery-thumbs! owner)[0m
+  [0m  [0m  [33m   ^--- No such namespace: g, could not locate g.cljs, g.cljc, or Closure namespace ""[0m
+  [36m15[0m  [36m  (session/put! :page :gallery))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m18[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:14  column:4  ----[0m
+
+  [1mUse of undeclared Var g/fetch-gallery-thumbs![0m
+
+  [36m10[0m  [36m  (session/put! :page :home)[0m
+  [36m11[0m  [36m  (reset! active-page :home))[0m
+  [36m12[0m  [36m[0m
+  [36m13[0m  [36m(secretary/defroute gallery "/gallery/:owner" [owner][0m
+  [33m14[0m  [1m  (g/fetch-gallery-thumbs! owner)[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var g/fetch-gallery-thumbs![0m
+  [36m15[0m  [36m  (session/put! :page :gallery))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(secretary/defroute about "/about" [][0m
+  [36m18[0m  [36m  (session/put! :page :about))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.783 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.892 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs  ----[0m
+
+  [1mNo such namespace: picture-gallery.gallery, could not locate picture_gallery/gallery.cljs, picture_gallery/gallery.cljc, or Closure namespace "picture-gallery.gallery" [0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.207 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.124 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.226 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.243 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.123 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.249 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.281 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.132 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.103 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.246 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.442 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.359 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:29  column:4  ----[0m
+
+  [1mNo such namespace: accountant, could not locate accountant.cljs, accountant.cljc, or Closure namespace ""[0m
+
+  [36m25[0m  [36m  (reset! active-page :about)[0m
+  [36m26[0m  [36m  (.log js/console @active-page))[0m
+  [36m27[0m  [36m[0m
+  [36m28[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m29[0m  [1m  (accountant/configure-navigation![0m
+  [0m  [0m  [33m   ^--- No such namespace: accountant, could not locate accountant.cljs, accountant.cljc, or Closure namespace ""[0m
+  [36m30[0m  [36m   {:nav-handler (fn [path] [0m
+  [36m31[0m  [36m                   (.log js/console path)[0m
+  [36m32[0m  [36m                   (secretary/dispatch! path))[0m
+  [36m33[0m  [36m    :path-exists? (fn [path] [0m
+  [36m34[0m  [36m                    (.log js/console path)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:29  column:4  ----[0m
+
+  [1mUse of undeclared Var accountant/configure-navigation![0m
+
+  [36m25[0m  [36m  (reset! active-page :about)[0m
+  [36m26[0m  [36m  (.log js/console @active-page))[0m
+  [36m27[0m  [36m[0m
+  [36m28[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m29[0m  [1m  (accountant/configure-navigation![0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var accountant/configure-navigation![0m
+  [36m30[0m  [36m   {:nav-handler (fn [path] [0m
+  [36m31[0m  [36m                   (.log js/console path)[0m
+  [36m32[0m  [36m                   (secretary/dispatch! path))[0m
+  [36m33[0m  [36m    :path-exists? (fn [path] [0m
+  [36m34[0m  [36m                    (.log js/console path)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 2.301 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:32  column:4  ----[0m
+
+  [1mNo such namespace: accountant, could not locate accountant.cljs, accountant.cljc, or Closure namespace ""[0m
+
+  [36m28[0m  [36m  (reset! active-page :about)[0m
+  [36m29[0m  [36m  (.log js/console @active-page))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m32[0m  [1m  (accountant/configure-navigation![0m
+  [0m  [0m  [33m   ^--- No such namespace: accountant, could not locate accountant.cljs, accountant.cljc, or Closure namespace ""[0m
+  [36m33[0m  [36m   {:nav-handler (fn [path] [0m
+  [36m34[0m  [36m                   (.log js/console path)[0m
+  [36m35[0m  [36m                   (secretary/dispatch! path))[0m
+  [36m36[0m  [36m    :path-exists? (fn [path] [0m
+  [36m37[0m  [36m                    (.log js/console path)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:32  column:4  ----[0m
+
+  [1mUse of undeclared Var accountant/configure-navigation![0m
+
+  [36m28[0m  [36m  (reset! active-page :about)[0m
+  [36m29[0m  [36m  (.log js/console @active-page))[0m
+  [36m30[0m  [36m[0m
+  [36m31[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m32[0m  [1m  (accountant/configure-navigation![0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var accountant/configure-navigation![0m
+  [36m33[0m  [36m   {:nav-handler (fn [path] [0m
+  [36m34[0m  [36m                   (.log js/console path)[0m
+  [36m35[0m  [36m                   (secretary/dispatch! path))[0m
+  [36m36[0m  [36m    :path-exists? (fn [path] [0m
+  [36m37[0m  [36m                    (.log js/console path)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.546 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:38  column:4  ----[0m
+
+  [1mNo such namespace: accountant, could not locate accountant.cljs, accountant.cljc, or Closure namespace ""[0m
+
+  [36m34[0m  [36m(defn- on-popstate [e][0m
+  [36m35[0m  [36m  (-> e .-token secretary/dispatch!))[0m
+  [36m36[0m  [36m[0m
+  [36m37[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m38[0m  [1m  (accountant/configure-navigation![0m
+  [0m  [0m  [33m   ^--- No such namespace: accountant, could not locate accountant.cljs, accountant.cljc, or Closure namespace ""[0m
+  [36m39[0m  [36m   {:nav-handler (fn [path] [0m
+  [36m40[0m  [36m                   (.log js/console path)[0m
+  [36m41[0m  [36m                   (secretary/dispatch! path))[0m
+  [36m42[0m  [36m    :path-exists? (fn [path] [0m
+  [36m43[0m  [36m                    (.log js/console path)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:38  column:4  ----[0m
+
+  [1mUse of undeclared Var accountant/configure-navigation![0m
+
+  [36m34[0m  [36m(defn- on-popstate [e][0m
+  [36m35[0m  [36m  (-> e .-token secretary/dispatch!))[0m
+  [36m36[0m  [36m[0m
+  [36m37[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m38[0m  [1m  (accountant/configure-navigation![0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var accountant/configure-navigation![0m
+  [36m39[0m  [36m   {:nav-handler (fn [path] [0m
+  [36m40[0m  [36m                   (.log js/console path)[0m
+  [36m41[0m  [36m                   (secretary/dispatch! path))[0m
+  [36m42[0m  [36m    :path-exists? (fn [path] [0m
+  [36m43[0m  [36m                    (.log js/console path)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.198 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:37  column:24  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.router/EventType[0m
+
+  [36m34[0m  [36m(defn- on-popstate [e][0m
+  [36m35[0m  [36m  (-> e .-token secretary/dispatch!))[0m
+  [36m36[0m  [36m[0m
+  [33m37[0m  [1m(events/listen history EventType on-popstate)[0m
+  [0m  [0m  [33m                       ^--- Use of undeclared Var picture-gallery.router/EventType[0m
+  [36m38[0m  [36m[0m
+  [36m39[0m  [36m(defn hook-browser-navigation! [][0m
+  [36m40[0m  [36m  (doto history [0m
+  [36m41[0m  [36m    (.setEnabled true)[0m
+  [36m42[0m  [36m    (.setPathPrefix "")[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.627 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:39  column:26  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.router/EventType[0m
+
+  [36m35[0m  [36m  (-> e .-token secretary/dispatch!))[0m
+  [36m36[0m  [36m[0m
+  [36m37[0m  [36m[0m
+  [36m38[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m39[0m  [1m  (events/listen history EventType on-popstate)[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var picture-gallery.router/EventType[0m
+  [36m40[0m  [36m  (doto history [0m
+  [36m41[0m  [36m    (.setEnabled true)[0m
+  [36m42[0m  [36m    (.setPathPrefix "")[0m
+  [36m43[0m  [36m    (.setUseFragment false)))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.293 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:39  column:27  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.router/EventType[0m
+
+  [36m35[0m  [36m  (-> e .-token secretary/dispatch!))[0m
+  [36m36[0m  [36m[0m
+  [36m37[0m  [36m[0m
+  [36m38[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m39[0m  [1m  (events/listen history  EventType on-popstate)[0m
+  [0m  [0m  [33m                          ^--- Use of undeclared Var picture-gallery.router/EventType[0m
+  [36m40[0m  [36m  (doto history [0m
+  [36m41[0m  [36m    (.setEnabled true)[0m
+  [36m42[0m  [36m    (.setPathPrefix "")[0m
+  [36m43[0m  [36m    (.setUseFragment false)))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.604 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:39  column:26  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.router/EventType[0m
+
+  [36m35[0m  [36m  (-> e .-token secretary/dispatch!))[0m
+  [36m36[0m  [36m[0m
+  [36m37[0m  [36m[0m
+  [36m38[0m  [36m(defn hook-browser-navigation! [][0m
+  [33m39[0m  [1m  (events/listen history EventType on-popstate)[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var picture-gallery.router/EventType[0m
+  [36m40[0m  [36m  (doto history [0m
+  [36m41[0m  [36m    (.setEnabled true)[0m
+  [36m42[0m  [36m    (.setPathPrefix "")[0m
+  [36m43[0m  [36m    (.setUseFragment false)))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.346 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.969 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.051 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:18  column:2  ----[0m
+
+  [1mUse of undeclared Var secretary.core/setprefix![0m
+
+  [36m14[0m  [36m  (.setToken history path))[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(def active-page (atom (session/get :page)))[0m
+  [36m17[0m  [36m[0m
+  [33m18[0m  [1m(secretary/setprefix! "#")[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var secretary.core/setprefix![0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(secretary/defroute home "/" [][0m
+  [36m21[0m  [36m  (session/put! :page :home)[0m
+  [36m22[0m  [36m  (reset! active-page :home)[0m
+  [36m23[0m  [36m  (.log js/console @active-page))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.989 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:18  column:2  ----[0m
+
+  [1mUse of undeclared Var secretary.core/setprefix![0m
+
+  [36m14[0m  [36m  (.setToken history path))[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(def active-page (atom (session/get :page)))[0m
+  [36m17[0m  [36m[0m
+  [33m18[0m  [1m(secretary/setprefix! "#")[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var secretary.core/setprefix![0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(secretary/defroute home "/" [][0m
+  [36m21[0m  [36m  (session/put! :page :home)[0m
+  [36m22[0m  [36m  (reset! active-page :home)[0m
+  [36m23[0m  [36m  (.log js/console @active-page))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.172 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:18  column:2  ----[0m
+
+  [1mUse of undeclared Var secretary.core/set-prefix![0m
+
+  [36m14[0m  [36m  (.setToken history path))[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(def active-page (atom (session/get :page)))[0m
+  [36m17[0m  [36m[0m
+  [33m18[0m  [1m(secretary/set-prefix! "#")[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var secretary.core/set-prefix![0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(secretary/defroute home "/" [][0m
+  [36m21[0m  [36m  (session/put! :page :home)[0m
+  [36m22[0m  [36m  (reset! active-page :home)[0m
+  [36m23[0m  [36m  (.log js/console @active-page))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.287 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.222 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.117 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/components/upload.cljs   line:20  column:30  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.upload/gallery[0m
+
+  [36m16[0m  [36m(gev/listen io[0m
+  [36m17[0m  [36m            goog.net.EventType.SUCCESS[0m
+  [36m18[0m  [36m            #(do[0m
+  [36m19[0m  [36m               (fetch-gallery-thumbs! (session/get :identity))[0m
+  [33m20[0m  [1m               (r/trans (gallery {:owner (session/get :identity)}))[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var picture-gallery.components.upload/gallery[0m
+  [36m21[0m  [36m               (reset! status [:div.alert.alert-success "file uploaded successfully"])))[0m
+  [36m22[0m  [36m(gev/listen io[0m
+  [36m23[0m  [36m            goog.net.EventType.ERROR[0m
+  [36m24[0m  [36m            #(reset! status [:div.alert.alert-danger "failed to upload the file"]))[0m
+  [36m25[0m  [36m(.setErrorChecker io #(s/includes? (.getResponseText io) "error"))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/components/upload.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.278 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.892 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\upload.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.014 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.058 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.066 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.045 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.057 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.086 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.217 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.799 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:21  column:3  ----[0m
+
+  [1mUnable to resolve var: home-page in this context at line 21 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\router.cljs[0m
+
+  [36m20[0m  [36m(secretary/defroute home "/" [][0m
+  [33m21[0m  [1m  (session/put! :page #'home-page)[0m
+  [0m  [0m  [33m  ^--- Unable to resolve var: home-page in this context at line 21 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\router.cljs[0m
+  [36m22[0m  [36m  (reset! active-page #'home-page)[0m
+  [36m23[0m  [36m  (.log js/console @active-page))[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.698 seconds.[0m
+[36m----  Could not Analyze  src/cljs/picture_gallery/router.cljs   line:21  column:3  ----[0m
+
+  [1mUnable to resolve var: home-page in this context at line 21 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\router.cljs[0m
+
+  [36m20[0m  [36m(secretary/defroute home "/" [][0m
+  [33m21[0m  [1m  (session/put! :page #'home-page)[0m
+  [0m  [0m  [33m  ^--- Unable to resolve var: home-page in this context at line 21 C:\Users\ponch\projects\picture-gallery\src\cljs\picture_gallery\router.cljs[0m
+  [36m22[0m  [36m  (reset! active-page #'home-page)[0m
+  [36m23[0m  [36m  (.log js/console @active-page))[0m
+
+[36m----  Analysis Error : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.748 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.897 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 2.122 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.058 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.369 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mAssert failed: Circular dependency detected, picture-gallery.components.gallery -> picture-gallery.router -> picture-gallery.components.gallery
+(not (some #{ns-name} seen))[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: Assert failed: Circular dependency detected, picture-gallery.components.gallery -> picture-gallery.router -> picture-gallery.components.gallery
+(not (some #{ns-name} seen))
+ at cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:167)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit$fn__751.invoke (js_deps.cljc:175)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6742.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:175)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit$fn__751.invoke (js_deps.cljc:175)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6742.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:175)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:165)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6744.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order.invokeStatic (js_deps.cljc:195)
+    cljs.js_deps$dependency_order.invoke (js_deps.cljc:189)
+    cljs.closure$build.invokeStatic (closure.clj:1945)
+    cljs.closure$build.invoke (closure.clj:1883)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__24616.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__25011.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25003.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__24841.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__24917.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__24963.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__25015.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__25056.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2893$fn__2894.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2893.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4676.invoke (core.clj:1941)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1142)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:617)
+    java.lang.Thread.run (Thread.java:745)
+
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.388 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mAssert failed: Circular dependency detected, picture-gallery.components.gallery -> picture-gallery.router -> picture-gallery.components.gallery
+(not (some #{ns-name} seen))[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: Assert failed: Circular dependency detected, picture-gallery.components.gallery -> picture-gallery.router -> picture-gallery.components.gallery
+(not (some #{ns-name} seen))
+ at cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:167)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit$fn__751.invoke (js_deps.cljc:175)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6742.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:175)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit$fn__751.invoke (js_deps.cljc:175)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6742.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:175)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:165)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6744.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order.invokeStatic (js_deps.cljc:195)
+    cljs.js_deps$dependency_order.invoke (js_deps.cljc:189)
+    cljs.closure$build.invokeStatic (closure.clj:1945)
+    cljs.closure$build.invoke (closure.clj:1883)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__24616.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__25011.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25003.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__24841.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__24917.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__24963.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__25015.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__25056.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2893$fn__2894.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2893.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4676.invoke (core.clj:1941)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1142)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:617)
+    java.lang.Thread.run (Thread.java:745)
+
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.366 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mAssert failed: Circular dependency detected, picture-gallery.components.gallery -> picture-gallery.router -> picture-gallery.components.gallery
+(not (some #{ns-name} seen))[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: Assert failed: Circular dependency detected, picture-gallery.components.gallery -> picture-gallery.router -> picture-gallery.components.gallery
+(not (some #{ns-name} seen))
+ at cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:167)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit$fn__751.invoke (js_deps.cljc:175)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6742.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:175)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit$fn__751.invoke (js_deps.cljc:175)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6742.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:175)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    cljs.js_deps$dependency_order_visit.invokeStatic (js_deps.cljc:165)
+    cljs.js_deps$dependency_order_visit.invoke (js_deps.cljc:163)
+    clojure.core.protocols$iter_reduce.invokeStatic (protocols.clj:49)
+    clojure.core.protocols$fn__6744.invokeStatic (protocols.clj:75)
+    clojure.core.protocols/fn (protocols.clj:75)
+    clojure.core.protocols$fn__6684$G__6679__6697.invoke (protocols.clj:13)
+    clojure.core$reduce.invokeStatic (core.clj:6545)
+    clojure.core$reduce.invoke (core.clj:6527)
+    cljs.js_deps$dependency_order.invokeStatic (js_deps.cljc:195)
+    cljs.js_deps$dependency_order.invoke (js_deps.cljc:189)
+    cljs.closure$build.invokeStatic (closure.clj:1945)
+    cljs.closure$build.invoke (closure.clj:1883)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__24616.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__25011.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25003.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__24841.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__24917.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__24963.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__25015.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__25056.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2893$fn__2894.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2893.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4676.invoke (core.clj:1941)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1142)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:617)
+    java.lang.Thread.run (Thread.java:745)
+
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:70  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.gallery/galleries[0m
+
+  [36m66[0m  [36m     [:div.row[0m
+  [36m67[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m68[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m69[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m70[0m  [1m        [g/galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.components.gallery/galleries[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn about-page [][0m
+  [36m73[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m74[0m  [36m[0m
+  [36m75[0m  [36m(defn galleries [gallery-links][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.508 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/router.cljs   line:19  column:3  ----[0m
+
+  [1mname already refers to: cljs.core/name being replaced by: picture-gallery.router/name[0m
+
+  [36m16[0m  [36m(def active-page (atom {}))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn add-route [name route component & params][0m
+  [33m19[0m  [1m  (secretary/defroute name route [params])[0m
+  [0m  [0m  [33m  ^--- name already refers to: cljs.core/name being replaced by: picture-gallery.router/name[0m
+  [36m20[0m  [36m  (swap! active-page assoc-in [name component]))[0m
+  [36m21[0m  [36m[0m
+  [36m22[0m  [36m(secretary/set-config! :prefix "#")[0m
+  [36m23[0m  [36m[0m
+  [36m24[0m  [36m(secretary/defroute home "/" [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/router.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:70  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.gallery/galleries[0m
+
+  [36m66[0m  [36m     [:div.row[0m
+  [36m67[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m68[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m69[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m70[0m  [1m        [g/galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.components.gallery/galleries[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn about-page [][0m
+  [36m73[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m74[0m  [36m[0m
+  [36m75[0m  [36m(defn galleries [gallery-links][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.935 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:70  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.gallery/galleries[0m
+
+  [36m66[0m  [36m     [:div.row[0m
+  [36m67[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m68[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m69[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m70[0m  [1m        [g/galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.components.gallery/galleries[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn about-page [][0m
+  [36m73[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m74[0m  [36m[0m
+  [36m75[0m  [36m(defn galleries [gallery-links][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.361 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\router.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:70  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.components.gallery/galleries[0m
+
+  [36m66[0m  [36m     [:div.row[0m
+  [36m67[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m68[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m69[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m70[0m  [1m        [g/galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.components.gallery/galleries[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn about-page [][0m
+  [36m73[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m74[0m  [36m[0m
+  [36m75[0m  [36m(defn galleries [gallery-links][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.403 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\components\gallery.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/picture_gallery/core.cljs   line:70  column:10  ----[0m
+
+  [1mUse of undeclared Var picture-gallery.core/galleries[0m
+
+  [36m66[0m  [36m     [:div.row[0m
+  [36m67[0m  [36m      [:div.col-md-12>h2 "Available Galleries"]][0m
+  [36m68[0m  [36m     (when-let [gallery-links (session/get :gallery-links)][0m
+  [36m69[0m  [36m       [:div.row>div.col-md-12[0m
+  [33m70[0m  [1m        [galleries gallery-links]])]))[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var picture-gallery.core/galleries[0m
+  [36m71[0m  [36m[0m
+  [36m72[0m  [36m(defn about-page [][0m
+  [36m73[0m  [36m  [:div "this is the story of picture-gallery... work in progress"])[0m
+  [36m74[0m  [36m[0m
+  [36m75[0m  [36m(defn galleries [gallery-links][0m
+
+[36m----  Compiler Warning : Please see src/cljs/picture_gallery/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.469 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.919 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.09 seconds.[0m
+notifying browser that file changed:  out\picture_gallery\core.js

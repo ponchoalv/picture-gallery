@@ -104,7 +104,7 @@
 
 (defn thumb-link [{:keys [owner name]}]
   [:div.col-sm-4
-   [:img
+   [:img.img-thumbnail
     {:src (str js/context "/gallery/" owner "/" name)
      :on-click #(session/put! :modal
                               (image-modal
@@ -139,3 +139,6 @@
             {:handler #(session/put! :thumbnail-links %)}))
 
 
+(defn list-galleries! []
+  (ajax/GET "/list-galleries"
+            {:handler #(session/put! :gallery-links %)}))

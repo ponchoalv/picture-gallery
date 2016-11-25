@@ -1,16 +1,15 @@
 (ns picture-gallery.core
-  (:require [picture-gallery.components.registration :as reg]
+  (:require [picture-gallery.router :as r]
+            [picture-gallery.components.registration :as reg]
             [picture-gallery.components.login :as l]
             [picture-gallery.components.upload :as u]
-            [picture-gallery.components.gallery :as g] 
+            [picture-gallery.components.gallery :as g]
             [picture-gallery.ajax :refer [load-interceptors!]]
-            [secretary.core :as secretary :include-macros true]
             [reagent.core :as reagent :refer [atom]]
             [reagent.session :as session]
             [goog.events :as events]
             [goog.history.EventType :as EventType]
-            [ajax.core :as ajax])
-  (:import goog.History))
+            [ajax.core :as ajax]))
 
 (defn account-actions [id]
   (let [expanded? (atom false)]
@@ -54,10 +53,10 @@
         {:on-click #(swap! collapsed? not)} [:i.fa.fa-bars]]
        [:div.collapse.navbar-toggleable-xs
         (when-not @collapsed? {:class "in"})
-        [:a.navbar-brand {:href "#/"} "Picture Gallery!"]
+        [:a.navbar-brand {:href (r/home)} "Picture Gallery!"]
         [:ul.nav.navbar-nav
-         [nav-link "#/" "Home" :home collapsed?]
-         [nav-link "#/about" "About" :about collapsed?]]
+         [nav-link (r/home) "Home" :home collapsed?]
+         [nav-link (r/about) "About" :about collapsed?]]
         [user-menu]]])))
 
 (defn galleries [gallery-links]
@@ -68,15 +67,11 @@
       (for [{:keys [owner name]} row]
         ^{:key (str owner name)}
         [:div.col-sm-4
-         [:a {:href (str "#/gallery/" owner)}
-          [:img {:src (str js/context "/gallery/" owner "/" name)}]]])])])
-
-(defn list-galleries! []
-  (ajax/GET "/list-galleries"
-            {:handler #(session/put! :gallery-links %)}))
+         [:a {:href (r/gallery {:owner owner})}
+          [:img.img-thumbnail {:src (str js/context "/gallery/" owner "/" name)}]]])])])
 
 (defn home-page []
-  (list-galleries!)
+  (g/list-galleries!)
   (fn []
     [:div.container
      [:div.row
@@ -88,40 +83,19 @@
 (defn about-page []
   [:div "this is the story of picture-gallery... work in progress"])
 
+(defn modal []
+  (when-let [session-modal (session/get :modal)] 
+    [session-modal]))
+
 (def pages
   {:home    #'home-page
    :gallery #'g/gallery-page
    :about   #'about-page})
 
-(defn modal []
-  (when-let [session-modal (session/get :modal)] 
-    [session-modal]))
-
 (defn page []
   [:div 
    [modal] 
-   [(pages (session/get :page))]])
-
-(secretary/set-config! :prefix "#")
-
-(secretary/defroute "/" []
-  (session/put! :page :home))
-
-(secretary/defroute "/gallery/:owner" [owner]
-  (g/fetch-gallery-thumbs! owner)
-  (session/put! :page :gallery))
-
-(secretary/defroute "/about" []
-  (session/put! :page :about))
-
-
-(defn hook-browser-navigation! []
-  (doto (History.)
-    (events/listen
-     EventType/NAVIGATE
-     (fn [event] 
-       (secretary/dispatch! (.-token event))))
-    (.setEnabled true)))
+   [(pages @r/active-page)]])
 
 (defn mount-components []
   (reagent/render [#'navbar] (.getElementById js/document "navbar"))
@@ -129,6 +103,6 @@
 
 (defn init! []
   (load-interceptors!)
-  (hook-browser-navigation!)
+  (r/hook-browser-navigation!)
   (session/put! :identity js/identity)
   (mount-components))

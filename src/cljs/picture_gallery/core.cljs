@@ -60,22 +60,19 @@
         [user-menu]]])))
 
 (defn galleries [gallery-links]
-  [:div.text-xs-center
-   (for [row (partition-all 3 gallery-links)]
-     ^{:key row}
-     [:div.row
-      (for [{:keys [owner name]} row]
-        ^{:key (str owner name)}
-        [:div.col-sm-4
-         [:a {:href (r/gallery {:owner owner})}
-          [:img.img-thumbnail {:src (str js/context "/gallery/" owner "/" name)}]]])])])
+  [:div.lightbox-gallery
+   (for [{:keys [owner name]} gallery-links]
+     ^{:key (str owner name)}
+     [:div
+      [:a {:href (r/gallery {:owner owner})}
+       [:img {:src (str js/context "/gallery/" owner "/" name)}]]])])
 
 (defn home-page []
   (g/list-galleries!)
   (fn []
     [:div.container
      [:div.row
-      [:div.col-md-12>h2 "Available Galleries"]]
+      [:div.col-md-12>h2.text-xs-center "Available Galleries"]]
      (when-let [gallery-links (session/get :gallery-links)]
        [:div.row>div.col-md-12
         [galleries gallery-links]])]))
